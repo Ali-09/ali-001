@@ -1,13 +1,102 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button:focus {outline:0;}
+
+.main{
+  @apply flex flex-col h-screen bg-gradient-to-t from-blueGray-900 to-blueGray-800; 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.idef{
+  @apply border-2 border-green-200 border-dashed;
+}
+
+.header{
+  @apply flex pt-8 pr-8 pl-8;
+}
+
+.title{
+  @apply text-gray-100 text-2xl font-light antialiased;
+}
+
+h1, h2, h3, h4, h5, p {
+  @apply text-white font-rubik;
+}
+
+.star-1{
+  width: 1px;
+  height: 1px;
+  animation: animStar 10s linear infinite;
+  opacity: 0;
+}
+
+.star-2{
+  width: 2px;
+  height: 2px;
+  animation: animStar 13s linear infinite;
+  opacity: 0;
+}
+
+.star-3{
+  width: 3px;
+  height: 3px;
+  animation: animStar 16s linear infinite;
+  opacity: 0;
+}
+
+@keyframes animStar{
+  0%{
+    transform: translateY(0px)
+  }
+  10%{
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(-250px)
+  }
+}
+
+.sideDown-enter{
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.sideDown-exit{
+  opacity: 1;
+  transform: translateY(0%);
+}
+.sideDown-enter-active{
+  opacity: 1;
+  transform: translateY(0%);
+}
+.sideDown-exit-active{
+  opacity: 0;
+  transform: translateY(100%);
+}
+.sideDown-enter-active,
+.sideDown-exit-active{
+  transition: all 500ms;
+}
+
+.sideUp-enter{
+  opacity: 0;
+  transform: translateY(100%);
+}
+.sideUp-exit{
+  opacity: 1;
+  transform: translateY(0%);
+}
+.sideUp-enter-active{
+  opacity: 1;
+  transform: translateY(0%);
+}
+.sideUp-exit-active{
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.sideUp-enter-active,
+.sideUp-exit-active{
+  transition: all 500ms;
 }
