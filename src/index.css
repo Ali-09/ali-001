@@ -4,18 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  box-sizing: border-box;
-  margin:0;
-  padding: 0;
-}
-
 html{
   @apply overflow-hidden h-screen max-h-screen leading-tight;
 }
 
 body{
-  @apply h-full max-h-full;
+  @apply h-full max-h-full w-full bg-gradient-to-t from-blueGray-900 to-blueGray-800;
+  position: fixed;
 }
 
 button:focus {outline:0;}
@@ -25,7 +20,7 @@ button:focus {outline:0;}
 }
 
 .main{
-  @apply flex flex-col h-full max-h-full bg-gradient-to-t from-blueGray-900 to-blueGray-800; 
+  @apply flex flex-col h-full; 
 }
 
 .idef{
@@ -33,7 +28,7 @@ button:focus {outline:0;}
 }
 
 .header{
-  @apply flex pt-8 pr-8 pl-8;
+  @apply flex pt-8 pr-8 pl-8 h-1/6;
 }
 
 .title{

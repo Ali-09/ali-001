@@ -5,7 +5,7 @@ import Container from '@components/Container'
 const Main = () => {
 
     return (    
-        <div className="flex flex-col-reverse md:flex-row flex-grow mx-8 gap-4 mt-8 overflow-hidden">
+        <div className="flex h-5/6 flex-col-reverse md:flex-row flex-grow px-8 gap-4 overflow-hidden">
             <SideLeft/>
             <Container/>
         </div>
