@@ -4,10 +4,28 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+
+html{
+  @apply overflow-hidden h-screen max-h-screen leading-tight;
+}
+
+body{
+  @apply h-full max-h-full;
+}
+
 button:focus {outline:0;}
 
+#root {
+  @apply h-full max-h-full;
+}
+
 .main{
-  @apply flex flex-col h-screen bg-gradient-to-t from-blueGray-900 to-blueGray-800; 
+  @apply flex flex-col h-full max-h-full bg-gradient-to-t from-blueGray-900 to-blueGray-800; 
 }
 
 .idef{
