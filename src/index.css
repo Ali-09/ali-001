@@ -5,15 +5,31 @@
 @tailwind utilities;
 
 html{
-  @apply overflow-hidden h-screen max-h-screen leading-tight;
+  @apply overflow-hidden h-screen max-w-full max-h-screen leading-tight bg-gradient-to-t from-blueGray-900 to-blueGray-800;
 }
 
 body{
-  @apply h-full max-h-full w-full bg-gradient-to-t from-blueGray-900 to-blueGray-800;
+  @apply h-full max-h-full w-full;
   position: fixed;
 }
 
 button:focus {outline:0;}
+
+h1, h2, h3, h4, h5, p, a, button {
+  @apply text-white font-rubik;
+}
+
+input{
+  @apply my-2 w-full h-12 p-2 rounded bg-transparent border border-white text-opacity-75 text-white;
+}
+
+input:hover{
+  @apply text-opacity-100 border-2;
+}
+
+input:focus{
+  @apply outline-none border-2 border-red-400;
+}
 
 #root {
   @apply h-full max-h-full;
@@ -28,15 +44,31 @@ button:focus {outline:0;}
 }
 
 .header{
-  @apply flex pt-8 pr-8 pl-8 h-1/6;
+  @apply flex pt-8 pr-8 pl-8 h-auto;
 }
 
-.title{
+.content{
+  @apply flex h-full flex-col-reverse md:flex-row flex-grow md:px-8 md:gap-4 overflow-hidden;
+}
+
+.container{
+  @apply h-5/6 md:h-full w-full px-4;
+}
+
+.aside{
+  @apply w-full h-1/6 flex flex-row justify-center md:h-full md:w-2/12 md:flex-col;
+}
+
+.title-header{
   @apply text-gray-100 text-2xl font-light antialiased;
 }
 
-h1, h2, h3, h4, h5, p {
-  @apply text-white font-rubik;
+.title{
+  @apply text-5xl md:text-7xl;
+}
+
+.text{
+  @apply text-2xl text-justify font-thin break-all text-opacity-80;
 }
 
 .star-1{

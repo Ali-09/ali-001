@@ -40,7 +40,7 @@ const Container = () => {
     }
 
     return (
-        <div onWheel={handleWheel} className="h-5/6 md:h-auto w-11/12 md:p-8">
+        <div onWheel={handleWheel} className="container">
             <SwitchTransition >
                 <CSSTransition nodeRef={nodeRef} key={section} timeout={500} classNames={animation}>
                         <div ref={nodeRef} className="section flex flex-col h-full">

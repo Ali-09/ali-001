@@ -3,9 +3,10 @@ import Title from './Title'
 
 const Me = () => {
     return (
-        <div className="flex flex-row w-full h-full">
+        <div className="flex flex-row w-full h-full self-center">
             <div className="self-center">
                 <Title/>
+                <p className="text-3xl text-red-400">Front End Developer</p>
             </div>
         </div>
     )

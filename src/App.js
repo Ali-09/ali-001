@@ -1,5 +1,5 @@
 import Header from '@ly/Header'
-import Main from '@components/Main'
+import Main from '@ly/Main'
 import State from '@ctx/State'
 
 function App() {

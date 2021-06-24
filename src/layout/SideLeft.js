@@ -9,9 +9,9 @@ const SideLeft = () => {
     ]
 
     return (
-        <div className="w-full h-1/6 md:h-full md:w-1/12 flex flex-row md:flex-col md:flex-wrap justify-center">
+        <div className="aside">
             {
-                tags.map((tag,k)=>(<LinkItem title={tag.title} section={tag.section} key={k}/>))
+                tags.map((tag,k)=>(<LinkItem tag={tag} key={k}/>))
             }
         </div>
     )
