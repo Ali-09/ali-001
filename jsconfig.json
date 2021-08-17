@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@ly/*": ["layout/*"],
+            "@components/*": ["components/*"],
+            "@icons/*": ["public/icons/*"],
+            "@ctx/*": ["context/*"],
+        }
+    }
+}

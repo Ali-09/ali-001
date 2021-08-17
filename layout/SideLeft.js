@@ -1,9 +1,8 @@
-import React from 'react'
 import LinkItem from '@components/LinkItem'
 
 const SideLeft = () => {
     const tags = [
-        {title:'ME', section:'me'},
+        {title:'ME', section:'/'},
         {title:'ABOUT', section:'about'},
         {title:'CONTACT', section:'contact'}
     ]

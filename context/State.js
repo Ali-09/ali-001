@@ -4,7 +4,7 @@ import Context from './Context'
 
 const State = (props) => {
     const initialState = {
-        section: 'me'
+        section: '/'
     }
 
     const [state, dispatch] = useReducer(Reducer, initialState)

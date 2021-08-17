@@ -3,7 +3,7 @@ import Divider from '@components/Divider'
 
 const About = () => {
     return (
-        <div className="flex flex-row w-full md:w-3/6 h-full">
+        <div className="about">
             <div className="self-center">
                 <div className="w-max">
                     <h1 className="title">ABOUT</h1>
