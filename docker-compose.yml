@@ -4,4 +4,4 @@ services:
         container_name: portafolio-front
         build: .
         ports: 
-            - "9000:80"
+            - "9000:3000"
