@@ -31,10 +31,13 @@ const Title = () => {
     },[typeWritten])
 
     return (
+        <div className="self-center w-2/6">
             <div className="flex items-center">
                 <h1 className="text-5xl md:text-7xl whitespace-pre">{sentece}</h1>
                 <p className="text-5xl md:text-7xl animate-fade">|</p>
             </div>
+            <p className="text-3xl text-red-400">Front End Developer</p>
+        </div>
     )    
 }
 
