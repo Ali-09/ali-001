@@ -1,11 +1,11 @@
 import Title from './Title'
-import Devices from './Devices'
+import Device from './Device'
 
 const Me = () => {
     return (
-        <div className="flex flex-row w-full h-full self-center">
+        <div className="flex flex-col justify-center md:flex-row w-full h-full self-center">
             <Title/>
-            <Devices/>
+            <Device/>
         </div>
     )
 }

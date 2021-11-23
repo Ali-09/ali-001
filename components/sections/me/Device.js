@@ -1,6 +1,6 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
-const Devices = () => {
+const Device = () => {
     const [lines, setLines] = useState([])
 
     useEffect(() => {
@@ -10,32 +10,36 @@ const Devices = () => {
             return colors[Math.floor(Math.random() * (3 - 0) + 0)]
         }
 
-        const getWidth = () => Math.floor(Math.random() * (5 - 1) + 1)
+        const getWidth = () => Math.floor(Math.random() * (5 - 2) + 1)
         
         const interval = setInterval(() => {
-            if(lines.length<35) {
+            if(lines.length<75) {
                 setLines(lines=>[
                     ...lines,
                     <div key={lines.length} className={`flex-shrink-0 animate-pulse mx-1 h-2 w-${getWidth()}/6 ${getBG()} rounded my-1`}></div>
                 ])
+                document.getElementById("code_lines").scrollTo({ top: document.getElementById("code_lines").scrollHeight, behavior: 'smooth' })
             } else {
                 clearInterval(interval)
             }
-        }, 400);
-        
+        }, 150);
         return () => clearInterval(interval) 
-      
+        
     }, [lines]);
 
+    
+
     return (
-        <div className="w-4/6 position relative">
-            <div className="border-gray-600 content-start bg-blueGray-500 opacity-70 border-2 rounded w-96 h-80 absolute right-2 bottom-20 overflow-y-hidden p-1 mx-2 flex flex-wrap">
+        <div className="md:w-4/6 relative opacity-40 md:opacity-100">
+            <div id="code_lines" className="border-gray-300 bg-blueGray-500 bg-opacity-20 md:content-start border-2 rounded w-full md:w-2/3 h-80 md:h-1/2 md:absolute md:right-4 md:bottom-40 overflow-y-hidden">
+                <div className="flex flex-wrap p-1 mx-2 relative">
                     {
                         lines
                     }
+                </div>
             </div>
         </div>
     )
 }
 
-export default Devices
+export default Device
