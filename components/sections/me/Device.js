@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 
 const Device = () => {
     const [lines, setLines] = useState([])
@@ -10,13 +10,17 @@ const Device = () => {
             return colors[Math.floor(Math.random() * (3 - 0) + 0)]
         }
 
-        const getWidth = () => Math.floor(Math.random() * (5 - 2) + 1)
+        
+        const getWidth = () => {
+            const sizes = ['w-1/6', 'w-3/6','w-3/6', 'w-2/6', 'w-1/6', 'w-2/6']
+            return sizes[Math.floor(Math.random() * 5 + 1)]
+        }
         
         const interval = setInterval(() => {
             if(lines.length<75) {
                 setLines(lines=>[
                     ...lines,
-                    <div key={lines.length} className={`flex-shrink-0 animate-pulse mx-1 h-2 w-${getWidth()}/6 ${getBG()} rounded my-1`}></div>
+                    <div key={lines.length} className={`flex-shrink-0 animate-pulse mx-1 h-2 ${getWidth()} ${getBG()} rounded my-1`}></div>
                 ])
                 document.getElementById("code_lines").scrollTo({ top: document.getElementById("code_lines").scrollHeight, behavior: 'smooth' })
             } else {
