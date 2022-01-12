@@ -7,12 +7,10 @@ const Title = () => {
     const [sentece, setSentence] = useState("")
 
     useEffect(() => {
-        return () => {
-            return(
-                clearTimeout(),
-                setSentence("")
-            )
-        }
+        return () => (
+            clearTimeout(),
+            setSentence("")
+        )
     }, [])
 
     const typeWritten = useCallback(() => {

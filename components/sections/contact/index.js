@@ -1,14 +1,13 @@
 import React from 'react'
-import Divider from '@components/Divider'
+import TitleGeneral from '@components/TitleGeneral.js'
 
 const Contact = () => {
     return (
-        <div className="flex flex-row w-full md:w-3/6 h-full">
-            <div className="self-center w-full">
-                <div className="w-max">
-                    <h1 className="title mb-2">CONTACT</h1>
-                    <Divider/>
-                </div>
+        <div className="flex flex-col md:flex-row md:content-center w-full h-full justify-center">
+            <div className="text-left flex items-center md:w-2/5 w-full">
+                <TitleGeneral text="CONTACT"/>
+            </div>
+            <div className="md:w-3/5 w-full md:self-center">
                 <form className="flex flex-col">
                     <p className="text">Name:</p>
                     <input defaultValue=""/>

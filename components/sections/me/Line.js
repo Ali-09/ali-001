@@ -11,7 +11,7 @@ const Line = () => {
     }
 
     return (
-        <div className={`px-1 h-2 ${getWidth()} my-1`}>
+        <div className={`px-1 h-2.5 ${getWidth()} my-1`}>
             <div className={`${getBG()} animate-pulse rounded h-full w-full`}></div>
         </div>
     )
