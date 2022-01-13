@@ -9,12 +9,14 @@ const Contact = () => {
             </div>
             <div className="md:w-3/5 w-full md:self-center">
                 <form className="flex flex-col">
+
                     <p className="text">Name:</p>
                     <input defaultValue=""/>
                     <p className="text">Subject:</p>
                     <input defaultValue=""/>
                     <p className="text">Content:</p>
-                    <input defaultValue=""/>
+                    <textarea rows={5}></textarea>
+                    <button className="btn-send hover:opacity-80" onClick={(e)=>e.preventDefault()}>Send</button>
                 </form>
             </div>
         </div>

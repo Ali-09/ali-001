@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 html{
-  @apply overflow-hidden h-screen max-w-full max-h-screen leading-tight bg-blueGray-900 bg-gradient-to-t from-blueGray-900 to-blueGray-800;
+  @apply overflow-hidden h-screen max-w-full max-h-screen leading-tight bg-blueGray-800 bg-gradient-to-t from-blueGray-800 to-blueGray-900;
 }
 
 body{
@@ -19,15 +19,19 @@ h1, h2, h3, h4, h5, p, a, button {
   @apply text-white font-rubik;
 }
 
-input{
-  @apply my-2 w-full h-12 p-2 rounded bg-transparent border border-white text-opacity-75 text-white;
+input, textarea{
+  @apply my-2 w-full h-12 p-2 rounded bg-transparent border border-white text-opacity-75 text-white text-xl;
 }
 
-input:hover{
+textarea{
+  @apply h-auto;
+}
+
+input:hover, textarea:hover{
   @apply text-opacity-100 border-2;
 }
 
-input:focus{
+input:focus, textarea:focus{
   @apply outline-none border-2 border-red-400;
 }
 
@@ -64,11 +68,11 @@ input:focus{
 }
 
 .title{
-  @apply text-5xl md:text-8xl;
+  @apply text-5xl md:text-7xl;
 }
 
 .text{
-  @apply text-2xl md:text-4xl text-justify font-thin break-all text-opacity-80;
+  @apply text-2xl md:text-3xl text-justify font-thin break-all text-opacity-80;
 }
 
 .section{
@@ -77,6 +81,10 @@ input:focus{
 
 .about{
   @apply flex flex-col md:flex-row md:content-center w-full h-full justify-center;
+}
+
+.btn-send{
+  @apply bg-red-400 text-white h-10 text-xl rounded-2xl my-2
 }
 
 .star-1{

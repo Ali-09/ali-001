@@ -6,7 +6,7 @@ import Description from '@components/sections/about/Description'
 const About = () => {
     return (
         <div className="about">
-            <div className="text-left flex items-center md:w-2/5 w-full flex-col justify-center">
+            <div className="text-left flex md:w-2/5 w-full flex-col justify-center">
                 <TitleGeneral text="ABOUT"/>
             </div>
             <div className="md:w-3/5 w-full md:self-center">
