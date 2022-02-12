@@ -29,7 +29,7 @@ const Title = () => {
     },[typeWritten])
 
     return (
-        <div className="fixed md:relative self-center md:w-2/6">
+        <div className="title-me">
             <div className="flex items-center">
                 <h1 className="text-5xl md:text-7xl whitespace-pre">{sentece}</h1>
                 <p className="text-5xl md:text-7xl animate-fade">|</p>

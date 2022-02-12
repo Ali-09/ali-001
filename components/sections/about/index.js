@@ -6,10 +6,10 @@ import Description from '@components/sections/about/Description'
 const About = () => {
     return (
         <div className="about">
-            <div className="text-left flex md:w-2/5 w-full flex-col justify-center">
+            <div className="title-about">
                 <TitleGeneral text="ABOUT"/>
             </div>
-            <div className="md:w-3/5 w-full md:self-center">
+            <div className="description-about">
                 <Description/>
                 <div className="flex w-full justify-center">
                     <Vue primaryColor="#FFFFFF" secondColor="#9CA3AF"/>

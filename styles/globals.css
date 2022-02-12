@@ -48,7 +48,7 @@ input:focus, textarea:focus{
 }
 
 .header{
-  @apply flex pt-8 pr-8 pl-8 h-auto;
+  @apply flex pt-8 pr-8 pl-8 h-auto justify-between;
 }
 
 .content{
@@ -60,11 +60,11 @@ input:focus, textarea:focus{
 }
 
 .aside{
-  @apply w-full h-1/6 flex flex-row justify-center md:h-full md:w-2/12 md:flex-col;
+  @apply w-full h-1/6 flex flex-row justify-center md:w-2/6 md:h-full lg:w-2/12 md:flex-col;
 }
 
 .title-header{
-  @apply text-gray-100 text-2xl font-light antialiased;
+  @apply text-gray-100 text-2xl font-light antialiased self-center;
 }
 
 .title{
@@ -79,12 +79,65 @@ input:focus, textarea:focus{
   @apply flex flex-col h-full;
 }
 
-.about{
-  @apply flex flex-col md:flex-row md:content-center w-full h-full justify-center;
+.me{
+  @apply flex flex-col justify-center lg:flex-row w-full h-full self-center;
 }
 
-.btn-send{
-  @apply bg-red-400 text-white h-10 text-xl rounded-2xl my-2
+.about{
+  @apply flex flex-col lg:flex-row lg:content-center w-full h-full justify-center;
+}
+
+.title-about{
+  @apply text-left flex lg:w-2/5 w-full flex-col justify-center;
+}
+
+.description-about{
+  @apply lg:w-3/5 w-full lg:self-center;
+}
+
+.title-contact{
+  @apply text-left flex items-center md:w-2/5 w-full;
+}
+
+.contact{
+  @apply flex flex-col lg:flex-row lg:content-center w-full h-full justify-center;
+}
+
+.title-contact{
+  @apply lg:w-3/5 w-full md:self-center;
+}
+
+.form-email{
+  @apply lg:w-3/5 w-full md:self-center;
+}
+
+.device{
+  @apply lg:w-4/6 relative opacity-40 lg:opacity-100;
+}
+
+.title-me{
+  @apply fixed lg:relative self-center lg:w-2/6;
+}
+
+.code-lines{
+  @apply border-gray-300 bg-blueGray-500 bg-opacity-20 lg:content-start border-2 rounded w-full lg:w-2/3 h-80 md:h-96 lg:h-1/2 lg:absolute md:right-4 md:bottom-40 overflow-y-hidden;
+}
+
+.btn{
+  @apply bg-red-400 text-white h-10 text-xl rounded-2xl hover:opacity-80 active:opacity-70;
+}
+
+.btn-social{
+  @apply rounded-full flex p-1 max-h-full h-9 hover:opacity-90 cursor-pointer mx-2;
+}
+
+.btn-social svg{
+  @apply transition-transform ease-in-out;
+}
+
+.btn-social:hover svg{
+  stroke: #F87171;
+  transform: translateY(-3px)
 }
 
 .star-1{

@@ -66,7 +66,7 @@ const Container = ({children}) => {
                 setSection(sectionPosition + 1 !== sections.length ? sections[sectionPosition + 1] : sections[sectionPosition])
                 router.push(sectionPosition + 1 !== sections.length ? sections[sectionPosition + 1] : sections[sectionPosition]);
             }
-        },800)
+        },600)
     }
 
     return (

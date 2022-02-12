@@ -24,8 +24,8 @@ const Device = () => {
     
 
     return (
-        <div className="md:w-4/6 relative opacity-40 md:opacity-100">
-            <div id="code_lines" className="border-gray-300 bg-blueGray-500 bg-opacity-20 md:content-start border-2 rounded w-full md:w-2/3 h-80 md:h-1/2 md:absolute md:right-4 md:bottom-40 overflow-y-hidden">
+        <div className="device">
+            <div id="code_lines" className="code-lines">
                 <div className="flex flex-wrap relative p-1">
                     {
                         lines
