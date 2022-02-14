@@ -3,8 +3,10 @@ import Social from "@ly/Social"
 const Header = () => {
     return (
         <div className="header">
-            <h1 className="title-header">JESUS ALI</h1>
-            <Social/>
+            <div className="title-header">
+                <h1 className="name-header">JESUS ALI</h1>
+            </div>
+            <Social />
         </div>
     )
 }

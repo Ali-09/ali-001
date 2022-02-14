@@ -1,7 +1,8 @@
 version: "3"
 services: 
     front:
-        container_name: portafolio-front
+        container_name: portafolio
         build: .
+        restart: unless-stopped
         ports: 
             - "9000:3000"

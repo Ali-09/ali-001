@@ -11,7 +11,11 @@ const Contact = () => {
                 <form className="flex flex-col">
                     <p className="text">Email:</p>
                     <input type="text"></input>
-                    <button className="btn my-1" onClick={(e)=>e.preventDefault()}>Send</button>
+                    <button className="btn my-1" onClick={(e)=>e.preventDefault()}>SEND</button>
+                    <p className='text-info'>
+                        The use of the information provided is only to send you a pdf document 
+                        by email to the email address provided in this form
+                    </p>
                 </form>
             </div>
         </div>

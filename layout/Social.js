@@ -2,7 +2,7 @@ import React from 'react'
  
 const Social = () => {
     return (
-        <div className='flex flex-row'>
+        <div className='social'>
             <a className="btn-social" target="_blank" rel="no noreferrer" href='https://github.com/ali-09'>
                 <svg role="img" viewBox="0 0 24 24" className="w-full" fill="none" 
                     stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" 
