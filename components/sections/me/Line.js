@@ -1,7 +1,7 @@
 const Line = () => {
 
     const getBG = () => {
-        const colors = ['bg-green-300', 'bg-red-300', 'bg-blue-300']
+        const colors = ['bg-emerald-300', 'bg-red-300', 'bg-blue-300']
         return colors[Math.floor(Math.random() * (3 - 0) + 0)]
     }
 

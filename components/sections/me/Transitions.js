@@ -8,7 +8,7 @@ const Transitions = () => {
 
         const bs = rand > 2 ? 'shadow-md' : 'shadow-xl'
 
-        return `star-${rand} bg-gray-300 mx-${randX} my-${randY} ${bs}`
+        return `star-${rand} bg-zinc-300 mx-${randX} my-${randY} ${bs}`
     }
 
     return (
