@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback, useRef } from 'react'
 
-const Title = () => {
+const MainTitle = () => {
 
     const title = "JESUS ALI"
     const index = useRef(0)
@@ -41,4 +41,4 @@ const Title = () => {
     )    
 }
 
-export default Title
+export default MainTitle

@@ -1,17 +1,13 @@
 import 'styles/globals.css'
-import Header from '@ly/Header'
 import State from '@ctx/State'
-import Main from '@ly/Main'
+import { CoreTemplate } from 'components'
 
 function MyApp({ Component, pageProps }) {
   return (
       <State>
-        <div className="main">
-          <Header/>
-          <Main>
-            <Component {...pageProps} />
-          </Main>
-        </div>
+        <CoreTemplate>
+          <Component {...pageProps} />
+        </CoreTemplate>
       </State>
   )
 }

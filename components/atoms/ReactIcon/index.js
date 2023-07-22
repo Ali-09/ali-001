@@ -1,4 +1,4 @@
-const React = ({primaryColor, secondColor}) => {
+const ReactIcon = ({primaryColor, secondColor}) => {
 
     return (
         <svg version="1.1" className="w-3/12 h-full svg-opacity" x="0px" y="0px" viewBox="0 0 512 512">
@@ -58,4 +58,4 @@ const React = ({primaryColor, secondColor}) => {
     )
 }
 
-export default React
+export default ReactIcon
