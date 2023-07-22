@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState, useRef } from 'react'
+import { useContext, useEffect, useState, useRef, useCallback } from 'react'
 import { useRouter } from 'next/router'
 //Context
 import Context from '@ctx/Context'
@@ -9,6 +9,7 @@ const Container = ({children}) => {
     const { section, setSection } = useContext(Context)
     const [animation, setAnimation] = useState('sideDown')
     const nodeRef = useRef(null);
+    const idTimeout = useRef(null);
     const [swipeY, setSwipeY] = useState(null);
     const sections = [
         '/',
@@ -18,12 +19,11 @@ const Container = ({children}) => {
 
     const router = useRouter()
 
-    useEffect(() => {
-        setSection(router.route.length === 1 ? router.route : router.route.slice(1))
+    useEffect(()=> {
         return () => {
-            clearTimeout()
+            clearTimeout(idTimeout.current)
         }
-    }, [])
+    })
   
     const getTouches = (evt) => evt.touches || evt.originalEvent.touches       
   
@@ -56,9 +56,9 @@ const Container = ({children}) => {
     const handleWheel = (e) => {
         const sectionPosition = sections.indexOf(section)
 
-        setAnimation(e.deltaY < 0 ? 'sideUp' : 'sideDown')
+        setAnimation(e.deltaY < 0 ? 'sideDown' : 'sideUp')
 
-        setTimeout(() => { 
+        idTimeout.current = setTimeout(() => { 
             if(e.deltaY < 0){
                 setSection(sectionPosition < 1 ? sections[sectionPosition] : sections[sectionPosition - 1])
                 router.push(sectionPosition < 1 ? sections[sectionPosition] : sections[sectionPosition - 1]);
@@ -72,7 +72,7 @@ const Container = ({children}) => {
     return (
         <div onWheel={handleWheel} onTouchMove={handleTouchMove} onTouchStart={handleTouchStart} className="container">
             <SwitchTransition >
-                <CSSTransition nodeRef={nodeRef} key={section} timeout={500} classNames={animation}>
+                <CSSTransition nodeRef={nodeRef} key={section} timeout={450} classNames={animation}>
                         <div ref={nodeRef} className="section">
                             {children}
                         </div>
