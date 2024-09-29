@@ -1,15 +1,12 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  mode: 'jit',
-  purge: [
+  content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
     './layout/**/*.{js,ts,jsx,tsx}',
-    './helpers/**/*.{js,ts,jsx,tsx}',
     './public/index.html'
   ],
-  darkMode: false, // or 'media' or 'class'
   textColor: {
     'primary': '#3490dc',
     'secondary': '#ffed4a',
@@ -35,7 +32,7 @@ module.exports = {
       },
       colors: {
         current: 'white',
-        blueGray: colors.blueGray
+        blueGray: colors.slate
       }
     },
   },

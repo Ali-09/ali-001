@@ -1,15 +1,7 @@
-import Head from 'next/head'
-import AboutSection from '@components/sections/about'
+import { AboutTemplate } from 'components'
 
 export default function About() {
   return (
-    <>
-      <Head>
-        <title>Jesus Ali</title>
-        <meta name="description" content="Jesus Ali Portfolio" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <AboutSection/>
-    </>
+    <AboutTemplate/>
   )
 }
