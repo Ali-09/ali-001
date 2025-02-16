@@ -17,6 +17,7 @@ const State = (props) => {
     }
 
     return (
+        // @ts-expect-error TS(2322): Type '{ section: any; setSection: (section: any) =... Remove this comment to see the full error message
         <Context.Provider value={{
             section: state.section,
             setSection
