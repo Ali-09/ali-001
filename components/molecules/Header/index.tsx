@@ -1,6 +1,6 @@
 import { LinkedInLink, GithubLink } from "components"
 
-const Header = () => {
+const Header: React.FC = () => {
     return (
         <div className="header">
             <div className="title-header">

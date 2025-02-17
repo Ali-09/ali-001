@@ -1,4 +1,4 @@
-const LinkedInLink = () => {
+const LinkedInLink: React.FC = () => {
   return (
     <a className="btn-social" target="_blank" href='https://www.linkedin.com/in/jesusrdzali/' rel="noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" 

@@ -1,39 +1,36 @@
-import { useState, useEffect } from 'react'
-import { FragmentCode } from 'components'
+import { useState, useEffect } from "react";
+import { FragmentCode } from "components";
 
 const ScreenCode = () => {
-    const [lines, setLines] = useState([])
+  const [lines, setLines] = useState<JSX.Element[]>([]);
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLines((prevLines) => {
+        if (prevLines.length < 75) {
+          return [...prevLines, <FragmentCode key={prevLines.length} />];
+        } else {
+          clearInterval(interval);
+          return prevLines;
+        }
+      });
 
-    useEffect(() => {
+      const codeContainer = document.getElementById("code_lines");
+      if (codeContainer) {
+        codeContainer.scrollTo({ top: codeContainer.scrollHeight, behavior: "smooth" });
+      }
+    }, 250);
 
-        const interval = setInterval(() => {
-            if(lines.length<75) {
-                setLines(lines=>[
-                    ...lines,
-                    <FragmentCode key={lines.length}/>
-                ])
-                document.getElementById("code_lines").scrollTo({ top: document.getElementById("code_lines").scrollHeight, behavior: 'smooth' })
-            } else {
-                clearInterval(interval)
-            }
-        }, 250);
-        return () => clearInterval(interval) 
-        
-    }, [lines]);
+    return () => clearInterval(interval);
+  }, []);
 
-    
+  return (
+    <div className="device">
+      <div id="code_lines" className="code-lines">
+        <div className="flex flex-wrap relative p-1">{lines}</div>
+      </div>
+    </div>
+  );
+};
 
-    return (
-        <div className="device">
-            <div id="code_lines" className="code-lines">
-                <div className="flex flex-wrap relative p-1">
-                    {
-                        lines
-                    }
-                </div>
-            </div>
-        </div>
-    )
-}
-
-export default ScreenCode
+export default ScreenCode;

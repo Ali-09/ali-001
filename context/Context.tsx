@@ -1,5 +1,10 @@
-import { createContext } from 'react'
+import { createContext } from "react";
 
-const context = createContext('')
+export interface ContextType {
+  section: string;
+  setSection: (section: string) => void;
+}
 
-export default context
+const Context = createContext<ContextType | undefined>(undefined);
+
+export default Context;

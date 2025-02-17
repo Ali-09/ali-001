@@ -7,9 +7,21 @@ import Context from 'context/Context'
 //next
 import { useRouter } from 'next/router'
 
-const LinkItem = ({tag}) => {
-    // @ts-expect-error TS(2339): Property 'setSection' does not exist on type 'Stri... Remove this comment to see the full error message
-    const { setSection, section } = useContext(Context)
+interface IProps {
+    tag: {
+        section: string;
+        title: string;
+    }
+}
+
+const LinkItem = ({ tag }: IProps) => {
+    const context = useContext(Context);
+  
+    if (!context) {
+      throw new Error("Container debe estar dentro del proveedor de contexto");
+    }
+
+    const { section, setSection } = context;
     const router = useRouter()
 
     return (

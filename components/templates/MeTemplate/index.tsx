@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { BodyMe } from 'components'
 
-const MeTemplate = () => {
+const MeTemplate: React.FC = () => {
   return (
     <>
         <Head>

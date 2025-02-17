@@ -1,6 +1,6 @@
 import { TitleGeneral } from 'components';
 
-const BodyContact = () => {
+const BodyContact: React.FC = () => {
   return (
     <div className="contact">
         <div className="title-contact">

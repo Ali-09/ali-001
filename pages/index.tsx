@@ -1,7 +1,9 @@
 import { MeTemplate } from 'components'
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <MeTemplate/>
   )
 }
+
+export default Home;

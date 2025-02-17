@@ -1,4 +1,4 @@
-const FragmentCode = () => {
+const FragmentCode: React.FC = () => {
 
     const getBG = () => {
         const colors = ['bg-emerald-300', 'bg-red-300', 'bg-blue-300']

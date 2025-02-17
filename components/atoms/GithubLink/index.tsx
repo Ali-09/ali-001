@@ -1,4 +1,4 @@
-const GithubLink = () => {
+const GithubLink: React.FC = () => {
   return (
     <a className="btn-social" target="_blank" rel="no noreferrer" href='https://github.com/ali-09'>
       <svg role="img" viewBox="0 0 24 24" className="w-full" fill="none" 

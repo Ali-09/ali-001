@@ -1,7 +1,11 @@
 import { SideMenu, Container } from "components";
 import { Header } from 'components'
 
-const CoreTemplate = ({ children }) => {
+interface IProps {
+  children: React.ReactNode
+}
+
+const CoreTemplate: React.FC<IProps> = ({ children }) => {
   return (
     <div className="main">
       <Header/>

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { BodyContact } from 'components';
 
-const ContactTemplate = () => {
+const ContactTemplate: React.FC = () => {
   return (
     <>    
         <Head>

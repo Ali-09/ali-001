@@ -29,6 +29,7 @@
     "@svgr/webpack": "5.5.0",
     "@types/node": "^22.13.4",
     "@types/react": "^18.3.18",
+    "@types/react-transition-group": "^4.4.12",
     "autoprefixer": "^10.4.14",
     "eslint": "7.32.0",
     "eslint-config-next": "13.3.0",

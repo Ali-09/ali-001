@@ -1,30 +1,37 @@
-import { useReducer } from 'react'
-import Reducer from './Reducer'
+import { ReactNode, useReducer } from 'react'
+import Reducer, { Action } from './Reducer'
 import Context from './Context'
 
-const State = (props) => {
-    const initialState = {
-        section: '/'
-    }
-
-    const [state, dispatch] = useReducer(Reducer, initialState)
-
-    const setSection = (section) => {
-        dispatch({
-            type:'SET_SECTION',
-            payload:section
-        })
-    }
-
-    return (
-        // @ts-expect-error TS(2322): Type '{ section: any; setSection: (section: any) =... Remove this comment to see the full error message
-        <Context.Provider value={{
-            section: state.section,
-            setSection
-        }}>
-            {props.children}
-        </Context.Provider>
-    )
+interface ContextProviderProps {
+  children: ReactNode;
 }
 
-export default State
+export interface State {
+    section: string;
+}
+
+const State = ({ children }: ContextProviderProps) => {
+  const initialState: State = {
+    section: '/'
+  };
+
+  const [state, dispatch] = useReducer((state: State, action: Action) => Reducer(state, action), initialState);
+
+  const setSection = (section: string) => {
+    dispatch({
+      type: 'SET_SECTION',
+      payload: section
+    });
+  };
+
+  return (
+    <Context.Provider value={{
+      section: state.section,
+      setSection
+    }}>
+      {children}
+    </Context.Provider>
+  );
+};
+
+export default State;

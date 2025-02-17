@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { BodyAbout } from 'components'
 
-const AboutTemplate = () => {
+const AboutTemplate: React.FC = () => {
   return (
     <>
         <Head>

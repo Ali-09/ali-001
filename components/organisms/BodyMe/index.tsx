@@ -1,6 +1,6 @@
 import { MainTitle, ScreenCode } from 'components'
 
-const BodyMe = () => {
+const BodyMe: React.FC = () => {
     return (
         <div className="me">
             <MainTitle/>

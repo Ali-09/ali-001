@@ -1,6 +1,6 @@
 import { TitleGeneral, VueIcon, ReactIcon } from 'components'
 
-const BodyAbout = () => {
+const BodyAbout: React.FC = () => {
     return (
         <div className="about">
             <div className="title-about">
@@ -9,8 +9,8 @@ const BodyAbout = () => {
             <div className="description-about">
                 <p className="text">
                     Hi i`m Jesus, i`m information technology engineer with 
-                    experience in frontend development with little more of 5 years 
-                    developing in js and the libraries react and vue.
+                    experience in frontend development with little more of 6 years 
+                    developing in js framework angular and the libraries react, vue.
                 </p>
                 <div className="flex w-full justify-center">
                     <VueIcon primaryColor="#FFFFFF" secondColor="#9CA3AF"/>
