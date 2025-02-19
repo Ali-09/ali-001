@@ -1,7 +1,9 @@
 import { AboutTemplate } from 'components'
 
-export default function About() {
+const About: React.FC = () => {
   return (
     <AboutTemplate/>
   )
 }
+
+export default About;
