@@ -1,7 +1,7 @@
 import React from 'react'
 import { Divider } from 'components'
 
-const TitleGeneral = ({text}) => {
+const TitleGeneral = ({ text } : { text: string }) => {
     return (
         <div className="w-max items-center">
             <h1 className="title">{text}</h1>

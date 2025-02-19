@@ -1,8 +1,9 @@
 import 'styles/globals.css'
 import State from '@ctx/State'
 import { CoreTemplate } from 'components'
+import { AppProps } from 'next/app'
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
       <State>
         <CoreTemplate>

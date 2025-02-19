@@ -1,7 +1,9 @@
 import { ContactTemplate } from 'components'
 
-export default function Contact() {
+const Contact: React.FC = () => {
   return (
     <ContactTemplate/>
   )
 }
+
+export default Contact;
