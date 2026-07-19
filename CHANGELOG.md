@@ -21,7 +21,7 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 - Actualización de herramientas de desarrollo y tipados: **ESLint v10.7.0**, **TypeScript v5.x**, **@svgr/webpack v8.1.0** y **react-transition-group v4.4.5**.
 - Migración del linter legado `.eslintrc` a la nueva arquitectura de Flat Config (**`eslint.config.mjs`**).
 - Corrección de tipados globales de TypeScript de `JSX.Element` a `React.JSX.Element` por compatibilidad con React 19.
-- Modificación de los scripts de desarrollo y compilación en `package.json` para inyectar el flag `--webpack` y mantener compatibilidad con el procesamiento personalizado de SVGs.
+- Configuración de reglas personalizadas en `next.config.js` para compilar archivos SVG como componentes React utilizando **Turbopack** (el empaquetador de Next.js por defecto). Esto elimina la necesidad de forzar Webpack y mejora significativamente el rendimiento de desarrollo y compilación.
 
 ---
 

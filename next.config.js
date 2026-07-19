@@ -1,4 +1,12 @@
 module.exports = {
+  turbopack: {
+    rules: {
+      "*.svg": {
+        loaders: ["@svgr/webpack"],
+        as: "*.js",
+      },
+    },
+  },
   webpack(config) {
     // Buscar la regla existente que maneja importaciones de SVG en Next.js
     const fileLoaderRule = config.module.rules.find((rule) =>
