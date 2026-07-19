@@ -17,6 +17,11 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 
 ### Changed
 - Organización de la documentación técnica agrupando archivos relevantes bajo la nueva carpeta `docs/`.
+- Actualización de las dependencias del core a versiones de última generación: **Next.js v16.2.10**, **React v19.2.7** y **React DOM v19.2.7**.
+- Actualización de herramientas de desarrollo y tipados: **ESLint v10.7.0**, **TypeScript v5.x**, **@svgr/webpack v8.1.0** y **react-transition-group v4.4.5**.
+- Migración del linter legado `.eslintrc` a la nueva arquitectura de Flat Config (**`eslint.config.mjs`**).
+- Corrección de tipados globales de TypeScript de `JSX.Element` a `React.JSX.Element` por compatibilidad con React 19.
+- Modificación de los scripts de desarrollo y compilación en `package.json` para inyectar el flag `--webpack` y mantener compatibilidad con el procesamiento personalizado de SVGs.
 
 ---
 
