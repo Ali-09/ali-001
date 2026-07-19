@@ -7,11 +7,6 @@ module.exports = {
     './layout/**/*.{js,ts,jsx,tsx}',
     './public/index.html'
   ],
-  textColor: {
-    'primary': '#3490dc',
-    'secondary': '#ffed4a',
-    'danger': '#e3342f',
-  },
   theme: {
     extend: {
       keyframes: {
@@ -27,12 +22,21 @@ module.exports = {
       animation: {
           fade: 'fade 1.5s ease-in-out infinite'
       },
-      fontFamily:{
-        rubik:['Rubik']
+      fontFamily: {
+        sans: ['Geist', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+        rubik: ['Rubik']
       },
       colors: {
         current: 'white',
-        blueGray: colors.slate
+        blueGray: colors.slate,
+        // Colores del sistema de diseño
+        background: 'var(--background)',
+        surface: 'var(--surface)',
+        primary: 'var(--primary)',
+        secondary: 'var(--secondary)',
+        lines: 'var(--lines)',
+        accent: 'var(--accent)'
       }
     },
   },

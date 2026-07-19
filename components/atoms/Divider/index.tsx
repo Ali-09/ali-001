@@ -12,8 +12,8 @@ const Divider: React.FC = () => {
 
     return (
         <div className="flex flex-col">
-            <div className={`h-1.5 md:h-3 my-1 bg-red-400 ${transition}`}></div>
-            <div className={`h-1.5 md:h-3 my-1 bg-red-400 self-end ${transition}`}></div>
+            <div className={`h-0.5 md:h-1 my-0.5 bg-accent ${transition}`}></div>
+            <div className={`h-0.5 md:h-1 my-0.5 bg-accent self-end ${transition}`}></div>
         </div>
     )
 }

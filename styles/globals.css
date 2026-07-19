@@ -1,11 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root {
+  --background: #F8F8F5;
+  --surface: #FFFFFF;
+  --primary: #222222;
+  --secondary: #5E5E5E;
+  --lines: #CFCFCF;
+  --accent: #FFB648;
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html{
-  @apply overflow-hidden h-screen max-w-full max-h-screen leading-tight bg-slate-800 bg-gradient-to-t from-slate-800 to-slate-900;
+  @apply overflow-hidden h-screen max-w-full max-h-screen leading-tight bg-background;
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(207, 207, 207, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(207, 207, 207, 0.12) 1px, transparent 1px);
 }
 
 body{
@@ -16,11 +29,11 @@ body{
 button:focus {outline:0;}
 
 h1, h2, h3, h4, h5, p, a, button {
-  @apply text-white font-rubik;
+  @apply text-primary font-sans;
 }
 
 input, textarea{
-  @apply my-2 w-full h-12 p-2 rounded bg-transparent border border-white text-opacity-75 text-white text-xl;
+  @apply my-2 w-full h-12 p-2 rounded bg-transparent border border-lines text-primary text-xl;
 }
 
 textarea{
@@ -28,11 +41,11 @@ textarea{
 }
 
 input:hover, textarea:hover{
-  @apply text-opacity-100 border-2;
+  @apply border-secondary;
 }
 
 input:focus, textarea:focus{
-  @apply outline-none border-2 border-red-400;
+  @apply outline-none border border-accent;
 }
 
 #__next {
@@ -56,7 +69,7 @@ input:focus, textarea:focus{
 }
 
 .name-header{
-  @apply text-zinc-100 text-2xl font-light antialiased self-center;
+  @apply text-primary text-2xl font-light antialiased self-center;
 }
 
 .social{
@@ -68,7 +81,7 @@ input:focus, textarea:focus{
 }
 
 .btn-social:hover svg{
-  stroke: #F87171;
+  stroke: var(--accent);
   transform: translateY(-3px)
 }
 
@@ -89,11 +102,11 @@ input:focus, textarea:focus{
 }
 
 .text-info{
-  @apply text-xl font-thin text-justify;
+  @apply text-xl font-thin text-justify text-secondary;
 }
 
 .text{
-  @apply text-2xl md:text-3xl text-justify font-thin break-all text-opacity-80;
+  @apply text-2xl md:text-3xl text-justify font-thin break-all text-primary opacity-80;
 }
 
 .section{
@@ -141,11 +154,11 @@ input:focus, textarea:focus{
 }
 
 .code-lines{
-  @apply border-zinc-300 bg-slate-500/20 lg:content-start border-2 rounded w-full lg:w-2/3 h-80 md:h-96 lg:h-1/2 lg:absolute md:right-4 md:bottom-40 overflow-y-hidden;
+  @apply border-lines bg-surface lg:content-start border rounded w-full lg:w-2/3 h-80 md:h-96 lg:h-1/2 lg:absolute md:right-4 md:bottom-40 overflow-y-hidden;
 }
 
 .btn{
-  @apply bg-red-400 text-white h-10 text-xl rounded-2xl hover:opacity-80 active:opacity-70;
+  @apply bg-transparent text-primary border border-primary h-10 text-xl rounded-2xl hover:border-accent hover:text-accent transition-colors duration-300;
 }
 
 .btn-social svg{

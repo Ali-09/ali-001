@@ -13,8 +13,8 @@ const BodyAbout: React.FC = () => {
                     developing in js framework angular and the libraries react, vue.
                 </p>
                 <div className="flex w-full justify-center">
-                    <VueIcon primaryColor="#FFFFFF" secondColor="#9CA3AF"/>
-                    <ReactIcon primaryColor="#9CA3AF" secondColor="#FFFFFF"/>
+                    <VueIcon primaryColor="var(--primary)" secondColor="var(--secondary)"/>
+                    <ReactIcon primaryColor="var(--secondary)" secondColor="var(--primary)"/>
                 </div>
             </div>
             

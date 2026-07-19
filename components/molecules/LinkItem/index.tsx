@@ -22,12 +22,20 @@ const LinkItem = ({ tag }: IProps) => {
     }
 
     const { section, setSection } = context;
+    const isActive = section === tag.section;
     const router = useRouter()
-
+ 
     return (
-        <button onClick={(e)=>{e.preventDefault();setSection(tag.section); router.push(tag.section)}} className="flex hover:opacity-80 cursor-pointer fill-current items-center text-zinc-300 mx-2 md:mx-0 my-4">
+        <button 
+          onClick={(e)=>{e.preventDefault();setSection(tag.section); router.push(tag.section)}} 
+          className={`flex hover:text-primary transition-colors duration-300 cursor-pointer fill-current items-center mx-2 md:mx-0 my-4 ${
+            isActive ? 'text-accent' : 'text-secondary'
+          }`}
+        >
             <OpenTagIcon className="w-3 h-3 md:w-6 md:h-6"/>
-                <p className={`text-md md:text-2xl px-1 font-light ${section === tag.section ? 'transition duration-1000 ease-in-out text-red-400' : null}`}>{tag.title}</p>
+                <p className={`text-md md:text-2xl px-1 font-light ${
+                  isActive ? 'transition duration-500 ease-in-out text-accent' : ''
+                }`}>{tag.title}</p>
             <EndTagIcon className="w-3 h-3 md:w-6 md:h-6"/>
         </button>
     )
