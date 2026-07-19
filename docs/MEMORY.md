@@ -35,10 +35,11 @@ Este documento registra las decisiones clave de diseño, lecciones aprendidas, p
 - [x] Efecto animado de máquina de escribir en el título principal (`MainTitle`).
 - [x] Pantalla de simulación de código autoscrolleable (`ScreenCode`).
 - [x] Dockerización multi-etapa y script de actualización automatizada (`start.sh`).
-- [x] Documentación técnica de referencia (`AGENTS.md`, `PRODUCT.md`, `ARCHITECTURE.md`, `STYLEGUIDE.md`).
+- [x] Documentación técnica de referencia (`AGENTS.md`, `PRODUCT.md`, `ARCHITECTURE.md`, `STYLEGUIDE.md`, `DESIGN.md`, `MEMORY.md`, `CHANGELOG.md`).
+- [x] **Formulario de Contacto Funcional**: Formulario dinámico con feedback visual del cliente conectado a la API de correo.
+- [x] **Descarga/Envío de CV**: Creado recurso `public/cv-jesus-ali.pdf` para descarga directa e integración automatizada como archivo adjunto por correo.
 
 ### Siguientes Pasos y Mejoras Pendientes 🚀
-- [ ] **Formulario de Contacto Funcional**: Reemplazar el simulador actual (`preventDefault()`) en `BodyContact` por una integración de envío real de emails (ej. EmailJS, Resend, o una API Route de Next.js en `pages/api/contact.ts`).
-- [ ] **Descarga/Envío de CV**: Configurar y validar el archivo PDF de currículum para enviarlo al correo proporcionado en el formulario o permitir la descarga directa.
 - [ ] **SEO & Meta tags**: Optimizar los meta tags dinámicos dentro de cada plantilla (`next/head`) para mejorar el posicionamiento en buscadores.
 - [ ] **Optimización de Assets**: Asegurar que las imágenes o recursos en `public/` estén comprimidos y optimizados.
+
