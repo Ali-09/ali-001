@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { FragmentCode } from "components";
 
 const ScreenCode = () => {
-  const [lines, setLines] = useState<JSX.Element[]>([]);
+  const [lines, setLines] = useState<React.JSX.Element[]>([]);
   
   useEffect(() => {
     const interval = setInterval(() => {
