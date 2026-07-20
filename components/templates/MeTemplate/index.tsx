@@ -5,7 +5,7 @@ const MeTemplate: React.FC = () => {
   return (
     <>
         <Head>
-            <title>Jesus Ali</title>
+            <title>Jesus Ali // Engineering Blueprint Portfolio</title>
             <meta name="description" content="Jesus Ali Portfolio" />
             <link rel="icon" href="/favicon.ico" />
         </Head>
