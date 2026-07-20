@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, p, a, button {
 }
 
 input, textarea{
-  @apply my-2 w-full h-12 p-2 rounded bg-transparent border border-lines text-primary text-xl;
+  @apply my-2 w-full h-12 p-2 rounded bg-surface bg-opacity-80 backdrop-blur-sm border border-lines text-primary text-xl;
 }
 
 textarea{
@@ -114,11 +114,11 @@ input:focus, textarea:focus{
 }
 
 .me{
-  @apply flex flex-col justify-center lg:flex-row w-full h-full self-center;
+  @apply flex flex-col justify-center items-center lg:flex-row w-full h-full gap-6 lg:gap-12;
 }
 
 .about{
-  @apply flex flex-col lg:flex-row lg:content-center w-full h-full justify-center;
+  @apply flex flex-col lg:flex-row items-center w-full h-full justify-center gap-6 lg:gap-12;
 }
 
 .title-about{
@@ -126,19 +126,15 @@ input:focus, textarea:focus{
 }
 
 .description-about{
-  @apply lg:w-3/5 w-full lg:self-center;
-}
-
-.title-contact{
-  @apply text-left flex items-center md:w-2/5 w-full;
+  @apply lg:w-3/5 w-full md:self-center;
 }
 
 .contact{
-  @apply flex flex-col lg:flex-row lg:content-center w-full h-full justify-center;
+  @apply flex flex-col lg:flex-row items-center w-full h-full justify-center gap-6 lg:gap-12;
 }
 
 .title-contact{
-  @apply lg:w-3/5 w-full md:self-center;
+  @apply text-left flex lg:w-2/5 w-full flex-col justify-center;
 }
 
 .form-email{
@@ -146,15 +142,15 @@ input:focus, textarea:focus{
 }
 
 .device{
-  @apply lg:w-4/6 relative opacity-40 lg:opacity-100;
+  @apply w-full lg:w-1/2 flex items-center justify-center relative opacity-100;
 }
 
 .title-me{
-  @apply fixed lg:relative self-center lg:w-2/6;
+  @apply w-full lg:w-1/2 flex flex-col justify-center;
 }
 
 .code-lines{
-  @apply border-lines bg-surface lg:content-start border rounded w-full lg:w-2/3 h-80 md:h-96 lg:h-1/2 lg:absolute md:right-4 md:bottom-40 overflow-y-hidden;
+  @apply border-lines bg-surface border rounded-md w-full h-80 md:h-96 overflow-y-hidden shadow-sm;
 }
 
 .btn{

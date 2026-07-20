@@ -33,7 +33,7 @@ const LinkItem = ({ tag }: IProps) => {
           }`}
         >
             <OpenTagIcon className="w-3 h-3 md:w-6 md:h-6"/>
-                <p className={`text-md md:text-2xl px-1 font-light ${
+                <p className={`text-md md:text-2xl px-1 font-medium ${
                   isActive ? 'transition duration-500 ease-in-out text-accent' : ''
                 }`}>{tag.title}</p>
             <EndTagIcon className="w-3 h-3 md:w-6 md:h-6"/>
