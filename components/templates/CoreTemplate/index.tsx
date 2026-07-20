@@ -18,7 +18,7 @@ const CoreTemplate: React.FC<IProps> = ({ children }) => {
         <div className="flex items-center gap-3">
           <span>ENG.ID: JESUS ALI</span>
           <span className="hidden sm:inline">|</span>
-          <span>ROLE: FRONTEND ARCHITECT</span>
+          <span>ROLE: SENIOR FRONTEND DEVELOPER</span>
         </div>
         <div className="flex items-center gap-2 my-1 sm:my-0">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>

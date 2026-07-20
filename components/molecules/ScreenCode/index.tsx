@@ -21,7 +21,7 @@ const codeSnippets: CodeLine[] = [
   { num: "08", tokens: [{ text: "" }] },
   { num: "09", tokens: [{ text: "const", className: "text-accent font-semibold" }, { text: " engineer", className: "text-primary font-medium" }, { text: ": ", className: "text-primary" }, { text: "Developer", className: "text-accent" }, { text: " = {" }] },
   { num: "10", tokens: [{ text: "  name", className: "text-secondary" }, { text: ": ", className: "text-primary" }, { text: "'Jesus Ali'", className: "text-emerald-600 dark:text-emerald-400" }, { text: "," }] },
-  { num: "11", tokens: [{ text: "  role", className: "text-secondary" }, { text: ": ", className: "text-primary" }, { text: "'Front End Architect'", className: "text-emerald-600 dark:text-emerald-400" }, { text: "," }] },
+  { num: "11", tokens: [{ text: "  role", className: "text-secondary" }, { text: ": ", className: "text-primary" }, { text: "'Senior Front End Developer'", className: "text-emerald-600 dark:text-emerald-400" }, { text: "," }] },
   { num: "12", tokens: [{ text: "  stack", className: "text-secondary" }, { text: ": [", className: "text-primary" }, { text: "'React'", className: "text-emerald-600 dark:text-emerald-400" }, { text: ", " }, { text: "'TypeScript'", className: "text-emerald-600 dark:text-emerald-400" }, { text: ", " }, { text: "'Next.js'", className: "text-emerald-600 dark:text-emerald-400" }, { text: "]," }] },
   { num: "13", tokens: [{ text: "  status", className: "text-secondary" }, { text: ": ", className: "text-primary" }, { text: "'ONLINE'", className: "text-emerald-600 dark:text-emerald-400" }] },
   { num: "14", tokens: [{ text: "};" }] },

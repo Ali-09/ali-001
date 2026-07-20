@@ -70,8 +70,8 @@ export default async function handler(
     await transporter.sendMail({
       from: `"Jesus Ali" <${fromEmail}>`,
       to: email,
-      subject: 'CV - Jesus Ali (Front End Developer)',
-      text: `Hola,\n\nMuchas gracias por tu interés en mi portafolio. Adjunto a este correo encontrarás mi Currículum Vitae en formato PDF.\n\nSaludos cordiales,\nJesus Ali\nFront End Developer`,
+      subject: 'CV - Jesus Ali (Senior Front End Developer)',
+      text: `Hola,\n\nMuchas gracias por tu interés en mi portafolio. Adjunto a este correo encontrarás mi Currículum Vitae en formato PDF.\n\nSaludos cordiales,\nJesus Ali\nSenior Front End Developer`,
       attachments: [
         {
           filename: 'CV_Jesus_Ali.pdf',
