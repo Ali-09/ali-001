@@ -165,7 +165,7 @@ input:focus, textarea:focus{
 }
 
 .btn{
-  @apply bg-transparent text-primary border border-primary h-10 text-xl rounded-2xl hover:border-accent hover:text-accent hover:-translate-y-0.5 transition-all duration-200 ease-out;
+  @apply bg-transparent text-primary border border-primary h-10 text-xl rounded-2xl hover:border-accent hover:text-accent hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 ease-out;
 }
 
 .btn-social svg{

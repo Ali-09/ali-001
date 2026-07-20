@@ -55,7 +55,7 @@ const Header: React.FC = () => {
       <div className="flex items-center gap-3">
         <button 
           onClick={toggleTheme}
-          className="font-mono text-xs px-2.5 py-1 rounded border border-lines/70 hover:border-accent text-secondary hover:text-accent transition-all duration-200 cursor-pointer flex items-center gap-1.5 bg-surface/40"
+          className="font-mono text-xs px-2.5 py-1 rounded border border-lines/70 hover:border-accent text-secondary hover:text-accent hover:scale-[1.03] active:scale-95 transition-all duration-200 cursor-pointer flex items-center gap-1.5 bg-surface/40"
           title="Toggle CAD Theme"
         >
           <span>{isDark ? '☀️ LIGHT' : '🌙 DARK'}</span>
