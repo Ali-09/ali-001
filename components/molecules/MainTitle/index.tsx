@@ -3,34 +3,49 @@ import Context from "context/Context";
 import { useRouter } from "next/router";
 
 const MainTitle = () => {
-  const title: string = "JESUS ALI";
-  const index = useRef<number>(0);
   const [sentece, setSentence] = useState<string>("");
   const context = useContext(Context);
   const router = useRouter();
 
-  const typeWritten = useCallback(() => {
-    let idTimeout: NodeJS.Timeout | null = null;
-    if (index.current < title.length) {
-      const arr = title.split("");
-      idTimeout = setTimeout(() => {
-        setSentence((sentence) => sentence + arr[index.current]);
-        index.current++;
-        typeWritten();
-      }, 120);
-    }
-    return () => {
-      if (idTimeout) clearTimeout(idTimeout);
-    };
-  }, []);
+  // Secuencia de tipeo con equivocación "JSSSA", borrado y corrección a "JESUS ALI"
+  const sequence = [
+    "J", "JS", "JSS", "JSSS", "JSSSA", // Equivocación
+    "JSSS", "JSS", "JS", "J",           // Borrado (Backspace)
+    "JE", "JES", "JESU", "JESUS", "JESUS ", "JESUS A", "JESUS AL", "JESUS ALI" // Corrección
+  ];
+
+  const indexRef = useRef<number>(0);
 
   useEffect(() => {
-    typeWritten();
-    return () => {
-      index.current = 0;
-      setSentence("");
+    let timeoutId: NodeJS.Timeout;
+
+    const runSequence = () => {
+      if (indexRef.current < sequence.length) {
+        const currentText = sequence[indexRef.current];
+        setSentence(currentText);
+
+        let delay = 100;
+        // Pausa al equivocarse y antes de corregir
+        if (currentText === "JSSSA") {
+          delay = 450;
+        } else if (currentText === "J" && indexRef.current > 3) {
+          delay = 250;
+        } else if (currentText === "JESUS ALI") {
+          return;
+        }
+
+        indexRef.current++;
+        timeoutId = setTimeout(runSequence, delay);
+      }
     };
-  }, [typeWritten]);
+
+    runSequence();
+
+    return () => {
+      if (timeoutId) clearTimeout(timeoutId);
+      indexRef.current = 0;
+    };
+  }, []);
 
   const handleNavigate = (path: string) => {
     if (context) context.setSection(path);
