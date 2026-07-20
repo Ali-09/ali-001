@@ -53,6 +53,9 @@ const BodyContact: React.FC = () => {
   return (
     <div className="contact">
         <div className="title-contact">
+            <div className="font-mono text-[11px] text-secondary/70 uppercase tracking-widest mb-1">
+                [FIG 03 // COMMUNICATION_LINK]
+            </div>
             <TitleGeneral text="CONTACT"/>
         </div>
         <div className="form-email">

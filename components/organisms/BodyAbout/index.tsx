@@ -4,6 +4,9 @@ const BodyAbout: React.FC = () => {
     return (
         <div className="about">
             <div className="title-about">
+                <div className="font-mono text-[11px] text-secondary/70 uppercase tracking-widest mb-1">
+                    [FIG 02 // PROFILE_SPECIFICATIONS]
+                </div>
                 <TitleGeneral text="ABOUT"/>
             </div>
             <div className="description-about">
