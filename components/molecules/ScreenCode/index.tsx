@@ -71,7 +71,7 @@ const ScreenCode: React.FC = () => {
         </div>
         
         {/* Contenedor de Código con Resaltado de Sintaxis */}
-        <div ref={containerRef} className="p-4 overflow-y-auto grow leading-relaxed space-y-1 bg-surface/50 backdrop-blur-sm">
+        <div ref={containerRef} className="p-4 overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden grow leading-relaxed space-y-1 bg-surface/50 backdrop-blur-sm">
           {codeSnippets.slice(0, visibleLines).map((line, idx) => (
             <div key={idx} className="flex items-center hover:bg-lines/10 px-1 rounded transition-colors duration-150">
               <span className="text-secondary/40 select-none mr-3 text-[11px] w-6 text-right shrink-0 border-r border-lines/30 pr-2">
