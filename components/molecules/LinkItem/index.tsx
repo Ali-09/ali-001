@@ -28,7 +28,7 @@ const LinkItem = ({ tag }: IProps) => {
     return (
         <button 
           onClick={(e)=>{e.preventDefault();setSection(tag.section); router.push(tag.section)}} 
-          className={`flex hover:text-primary transition-colors duration-300 cursor-pointer fill-current items-center mx-2 md:mx-0 my-4 ${
+          className={`flex hover:text-primary hover:translate-x-1.5 transition-all duration-200 ease-out cursor-pointer fill-current items-center mx-2 md:mx-0 my-4 ${
             isActive ? 'text-accent' : 'text-secondary'
           }`}
         >
