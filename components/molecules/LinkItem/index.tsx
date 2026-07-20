@@ -28,15 +28,15 @@ const LinkItem = ({ tag }: IProps) => {
     return (
         <button 
           onClick={(e)=>{e.preventDefault();setSection(tag.section); router.push(tag.section)}} 
-          className={`flex hover:text-primary hover:translate-x-1.5 transition-all duration-200 ease-out cursor-pointer fill-current items-center mx-2 md:mx-0 my-4 ${
-            isActive ? 'text-accent' : 'text-secondary'
+          className={`flex items-center hover:translate-x-1.5 transition-all duration-200 ease-out cursor-pointer mx-2 md:mx-0 my-4 ${
+            isActive ? 'text-accent' : 'text-secondary hover:text-primary'
           }`}
         >
-            <OpenTagIcon className="w-3 h-3 md:w-6 md:h-6"/>
-                <p className={`text-md md:text-2xl px-1 font-medium ${
-                  isActive ? 'transition duration-500 ease-in-out text-accent' : ''
-                }`}>{tag.title}</p>
-            <EndTagIcon className="w-3 h-3 md:w-6 md:h-6"/>
+            <OpenTagIcon className="w-3.5 h-3.5 md:w-6 md:h-6 shrink-0 opacity-100"/>
+            <p className={`text-md md:text-2xl px-1.5 font-medium ${
+              isActive ? 'transition duration-300 ease-in-out text-accent' : ''
+            }`}>{tag.title}</p>
+            <EndTagIcon className="w-3.5 h-3.5 md:w-6 md:h-6 shrink-0 opacity-100"/>
         </button>
     )
 }
