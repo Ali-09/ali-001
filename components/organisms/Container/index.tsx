@@ -134,7 +134,7 @@ const Container = ({ children }: ContainerProps) => {
         <CSSTransition
           nodeRef={nodeRef}
           key={section}
-          timeout={450}
+          timeout={300}
           classNames={animation}
         >
           <div ref={nodeRef} className="section">

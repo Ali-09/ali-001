@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react" 
 
 const Divider: React.FC = () => {
-    const [transition, setTransition] = useState<string>('transition-all duration-1000 ease-in-out w-0')
+    const [transition, setTransition] = useState<string>('transition-all duration-400 ease-out w-0')
     
     useEffect(() => {
-        setTimeout(() => {
-            setTransition('transition-all duration-1000 ease-in-out w-5/6')
-        }, 600);
-        return ()=>setTransition('transition-all duration-1000 ease-in-out w-0')
+        const timer = setTimeout(() => {
+            setTransition('transition-all duration-400 ease-out w-5/6')
+        }, 150);
+        return () => {
+            clearTimeout(timer);
+            setTransition('transition-all duration-400 ease-out w-0');
+        };
     }, [])
 
     return (

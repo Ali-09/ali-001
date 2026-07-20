@@ -212,7 +212,7 @@ input:focus, textarea:focus{
 }
 .sideDown-enter-active,
 .sideDown-exit-active{
-  transition: all 500ms;
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), opacity 300ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sideUp-enter{
@@ -233,21 +233,21 @@ input:focus, textarea:focus{
 }
 .sideUp-enter-active,
 .sideUp-exit-active{
-  transition: all 500ms;
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), opacity 300ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .path-border {
   stroke-miterlimit: 10;
   stroke-dashoffset: 2457;
-	stroke-dasharray: 2457;
-  animation: dash 5s ease-in forwards;
-  animation-delay: 1.5s;
+  stroke-dasharray: 2457;
+  animation: dash 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.2s;
 }
 
 .svg-opacity{
   opacity: 0;
-  animation: show 1s ease-in-out forwards;
-  animation-delay: 0.5s;
+  animation: show 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.1s;
 }
 
 @keyframes dash {

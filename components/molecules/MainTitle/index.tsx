@@ -17,7 +17,7 @@ const MainTitle = () => {
         setSentence((sentence) => sentence + arr[index.current]);
         index.current++;
         typeWritten();
-      }, 400);
+      }, 120);
     }
     return () => {
       if (idTimeout) clearTimeout(idTimeout);
