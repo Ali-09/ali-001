@@ -13,7 +13,7 @@ const SideMenu = () => {
   ];
 
   return (
-    <aside className="aside w-full md:w-60 lg:w-64 border-b md:border-b-0 md:border-r border-lines p-5 flex flex-col justify-between items-center bg-surface shrink-0 shadow-sm transition-colors duration-300">
+    <aside className="aside w-full md:w-60 lg:w-64 border-b md:border-b-0 md:border-r border-lines/50 p-5 flex flex-col justify-between items-center bg-transparent shrink-0 transition-colors duration-300">
       <div className="w-full flex flex-col items-center my-auto">
         {/* CAD Navigation Header Label */}
         <div className="w-full font-mono text-xs text-primary font-bold uppercase tracking-widest mb-6 flex items-center justify-between px-2 select-none border-b border-lines pb-3">

@@ -32,10 +32,10 @@ const LinkItem = ({ tag, index }: IProps) => {
         setSection(tag.section);
         router.push(tag.section);
       }}
-      className={`group w-full flex items-center justify-between px-4 py-3 rounded-md border font-mono transition-all duration-200 cursor-pointer shadow-sm ${
+      className={`group w-full flex items-center justify-between px-4 py-3 rounded-md border font-mono transition-all duration-200 cursor-pointer ${
         isActive
-          ? 'bg-surface border-accent text-accent font-bold ring-1 ring-accent'
-          : 'bg-surface border-lines text-primary hover:text-accent hover:border-accent'
+          ? 'bg-accent/15 border-accent text-accent font-bold ring-1 ring-accent'
+          : 'bg-transparent border-lines/60 text-primary hover:text-accent hover:border-accent hover:bg-surface/30'
       }`}
     >
       <div className="flex items-center justify-center gap-2.5 w-full">
