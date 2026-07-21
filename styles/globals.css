@@ -101,23 +101,23 @@ input:focus, textarea:focus{
 }
 
 .container{
-  @apply h-full w-full px-3 md:px-8 py-2 md:py-4 overflow-hidden flex flex-col justify-center items-center;
+  @apply h-full w-full px-4 sm:px-8 py-3 sm:py-6 overflow-hidden flex flex-col justify-center items-center;
 }
 
 .aside{
-  @apply w-full md:w-60 lg:w-64 h-auto md:h-full flex flex-col justify-between shrink-0 py-1 md:py-6 px-3 md:px-6;
+  @apply w-full md:w-60 lg:w-64 h-auto md:h-full flex flex-col justify-between shrink-0 py-2 md:py-6 px-4 md:px-6;
 }
 
 .title{
-  @apply text-2xl sm:text-4xl md:text-6xl font-bold tracking-tight font-sans mb-1 sm:mb-3;
+  @apply text-3xl sm:text-5xl md:text-7xl font-bold tracking-tight font-sans mb-3 sm:mb-6;
 }
 
 .text-info{
-  @apply text-[11px] sm:text-xs font-mono text-center text-secondary opacity-70 mt-2;
+  @apply text-xs font-mono text-center text-secondary opacity-70 mt-3 sm:mt-4;
 }
 
 .text{
-  @apply text-xs sm:text-base md:text-xl font-sans text-primary opacity-90 leading-normal sm:leading-relaxed text-left my-1 sm:my-3;
+  @apply text-xs sm:text-base md:text-xl font-sans text-primary opacity-90 leading-relaxed text-left my-2 sm:my-4;
 }
 
 .section{
@@ -125,31 +125,31 @@ input:focus, textarea:focus{
 }
 
 .me{
-  @apply flex flex-col justify-center items-center lg:flex-row w-full h-full gap-3 sm:gap-6 lg:gap-12;
+  @apply flex flex-col justify-center items-center lg:flex-row w-full h-full gap-5 sm:gap-8 lg:gap-12;
 }
 
 .about{
-  @apply flex flex-col lg:flex-row items-center w-full h-full justify-center gap-2 sm:gap-6 lg:gap-12;
+  @apply flex flex-col lg:flex-row items-center w-full h-full justify-center gap-5 sm:gap-8 lg:gap-12;
 }
 
 .title-about{
-  @apply text-left flex lg:w-2/5 w-full flex-col justify-center mb-1 sm:mb-0;
+  @apply text-left flex lg:w-2/5 w-full flex-col justify-center mb-3 sm:mb-6 lg:mb-0;
 }
 
 .description-about{
-  @apply lg:w-3/5 w-full md:self-center p-3.5 sm:p-6 space-y-2.5 sm:space-y-4;
+  @apply lg:w-3/5 w-full md:self-center p-4 sm:p-7 space-y-3.5 sm:space-y-5;
 }
 
 .contact{
-  @apply flex flex-col lg:flex-row items-center w-full h-full justify-center gap-2 sm:gap-6 lg:gap-12;
+  @apply flex flex-col lg:flex-row items-center w-full h-full justify-center gap-5 sm:gap-8 lg:gap-12;
 }
 
 .title-contact{
-  @apply text-left flex lg:w-2/5 w-full flex-col justify-center mb-1 sm:mb-0;
+  @apply text-left flex lg:w-2/5 w-full flex-col justify-center mb-3 sm:mb-6 lg:mb-0;
 }
 
 .form-email{
-  @apply lg:w-3/5 w-full md:self-center p-3.5 sm:p-6 space-y-2.5 sm:space-y-4;
+  @apply lg:w-3/5 w-full md:self-center p-4 sm:p-7 space-y-3.5 sm:space-y-5;
 }
 
 .device{
