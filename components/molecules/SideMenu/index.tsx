@@ -20,12 +20,12 @@ const SideMenu = () => {
   return (
     <aside className="aside w-full md:w-60 lg:w-64 px-3 py-2 md:p-6 flex flex-col justify-between items-center bg-transparent shrink-0 transition-colors duration-300 h-auto md:h-full">
       {/* CAD Navigation Header Label */}
-      <div className="w-full font-mono text-[10px] sm:text-xs text-primary font-bold uppercase tracking-widest flex items-center justify-between px-1.5 select-none pb-1.5 sm:pb-3">
+      <div className="hidden md:flex w-full font-mono text-xs text-primary font-bold uppercase tracking-widest items-center justify-between px-1.5 select-none pb-3">
         <span className="flex items-center gap-2">
-          <span className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-accent animate-pulse"></span>
+          <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
           <span>{t?.sideNav.navSys || "SHEETS // NAV.SYS"}</span>
         </span>
-        <span className="text-[9px] sm:text-[10px] text-secondary font-mono">v2.4</span>
+        <span className="text-[10px] text-secondary font-mono">v2.4</span>
       </div>
 
       {/* Navigation Sheet Buttons (Perfectly Centered with Container Content) */}
