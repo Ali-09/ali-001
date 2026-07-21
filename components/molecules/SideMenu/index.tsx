@@ -13,9 +13,9 @@ const SideMenu = () => {
   ];
 
   return (
-    <aside className="aside w-full md:w-60 lg:w-64 border-b md:border-b-0 md:border-r border-lines/50 p-6 flex flex-col justify-between items-center bg-transparent shrink-0 transition-colors duration-300 h-full">
+    <aside className="aside w-full md:w-60 lg:w-64 p-6 flex flex-col justify-between items-center bg-transparent shrink-0 transition-colors duration-300 h-full">
       {/* CAD Navigation Header Label */}
-      <div className="w-full font-mono text-xs text-primary font-bold uppercase tracking-widest flex items-center justify-between px-2 select-none border-b border-lines/50 pb-3">
+      <div className="w-full font-mono text-xs text-primary font-bold uppercase tracking-widest flex items-center justify-between px-2 select-none pb-3">
         <span className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
           <span>SHEETS // NAV.SYS</span>
@@ -31,7 +31,7 @@ const SideMenu = () => {
       </div>
 
       {/* CAD Sidebar Technical Footer */}
-      <div className="hidden md:block w-full font-mono text-[10px] text-secondary pt-4 border-t border-lines/50 uppercase tracking-widest space-y-1 select-none">
+      <div className="hidden md:block w-full font-mono text-[10px] text-secondary pt-4 uppercase tracking-widest space-y-1 select-none">
         <div className="flex justify-between">
           <span>SCALE:</span>
           <span className="text-primary font-bold">1:1</span>

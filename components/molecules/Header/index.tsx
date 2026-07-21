@@ -38,7 +38,7 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <header className="header border-b border-lines/50 pb-4 pt-6 px-6 lg:px-12 flex flex-row items-center justify-between bg-transparent transition-colors duration-300">
+    <header className="header pb-4 pt-6 px-6 lg:px-12 flex flex-row items-center justify-between bg-transparent transition-colors duration-300">
       {/* Brand CAD Stamp */}
       <div className="flex items-center gap-3">
         <div className="font-mono text-lg md:text-xl font-bold tracking-wider text-primary flex items-center gap-2">

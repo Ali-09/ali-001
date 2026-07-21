@@ -14,7 +14,7 @@ const CoreTemplate: React.FC<IProps> = ({ children }) => {
           <Container>{children}</Container>
       </div>
       {/* Pie de página tipo Bloque de Título de Ingeniería CAD */}
-      <footer className="w-full border-t border-lines/40 py-2 px-8 flex flex-col sm:flex-row justify-between items-center font-mono text-[10px] text-secondary/60 tracking-wider">
+      <footer className="w-full py-2 px-8 flex flex-col sm:flex-row justify-between items-center font-mono text-[10px] text-secondary/60 tracking-wider relative z-10 bg-transparent">
         <div className="flex items-center gap-3">
           <span>ENG.ID: JESUS ALI</span>
           <span className="hidden sm:inline">|</span>
