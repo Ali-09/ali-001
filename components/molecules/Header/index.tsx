@@ -27,6 +27,16 @@ const Header: React.FC = () => {
     }
   };
 
+  const [coords, setCoords] = useState<{ x: number; y: number }>({ x: 245, y: 980 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setCoords({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   return (
     <header className="header border-b border-lines/50 pb-4 pt-6 px-6 lg:px-12 flex flex-row items-center justify-between bg-transparent transition-colors duration-300">
       {/* Brand CAD Stamp */}
@@ -48,7 +58,7 @@ const Header: React.FC = () => {
         <span className="text-lines font-bold">|</span>
         <span className="font-semibold">REV 2.4</span>
         <span className="text-lines font-bold">|</span>
-        <span className="font-semibold">SCALE 1:1</span>
+        <span className="font-mono text-accent font-semibold">POS: X-{coords.x.toString().padStart(4, '0')} Y-{coords.y.toString().padStart(4, '0')}</span>
       </div>
 
       {/* Theme Toggle & Social Links */}

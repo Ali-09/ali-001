@@ -64,14 +64,17 @@ const BodyContact: React.FC = () => {
             <div className="absolute -bottom-2 -left-2 text-[10px] font-mono text-secondary/50 group-hover:text-accent group-hover:rotate-45 transition-all duration-300 select-none">+</div>
             <div className="absolute -bottom-2 -right-2 text-[10px] font-mono text-secondary/50 group-hover:text-accent group-hover:rotate-45 transition-all duration-300 select-none">+</div>
             <form onSubmit={handleSubmit} className="flex flex-col">
-                <p className="text">Email:</p>
+                <div className="flex items-center justify-between mb-2 font-mono text-[11px] text-secondary">
+                  <span>[INPUT // EMAIL_ADDRESS]</span>
+                  <span className="text-accent font-semibold">*REQUIRED</span>
+                </div>
                 <input 
                   type="email" 
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   disabled={status === 'loading'}
                   placeholder="name@example.com"
-                  className="px-2"
+                  className="px-3 py-2 border border-lines rounded-md bg-surface text-primary focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/40 font-mono text-sm transition-all duration-200 mb-4"
                 />
                 
                 <button 

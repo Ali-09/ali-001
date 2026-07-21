@@ -19,9 +19,19 @@ const BodyAbout: React.FC = () => {
                     experience in frontend development with little more of 6 years 
                     developing in js framework angular and the libraries react, vue.
                 </p>
-                <div className="flex w-full justify-center mt-6">
-                    <VueIcon primaryColor="var(--primary)" secondColor="var(--secondary)"/>
-                    <ReactIcon primaryColor="var(--secondary)" secondColor="var(--primary)"/>
+                <div className="flex flex-col sm:flex-row items-center justify-between mt-8 pt-4 border-t border-lines/40 gap-4">
+                    <div className="flex items-center gap-4">
+                        <VueIcon primaryColor="var(--primary)" secondColor="var(--secondary)"/>
+                        <ReactIcon primaryColor="var(--secondary)" secondColor="var(--primary)"/>
+                    </div>
+                    <a 
+                      href="/cv-jesus-ali.pdf" 
+                      download="CV_Jesus_Ali.pdf"
+                      className="btn text-xs px-4 py-2 h-auto rounded-md font-mono tracking-wider flex items-center gap-2 border-lines hover:border-accent text-secondary hover:text-accent cursor-pointer"
+                    >
+                      <span>DOWNLOAD CV (PDF)</span>
+                      <span className="text-accent font-bold">↓</span>
+                    </a>
                 </div>
             </div>
             
