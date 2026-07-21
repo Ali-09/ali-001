@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback, useRef, useContext } from "react";
+import { useEffect, useState, useRef, useContext } from "react";
 import Context from "context/Context";
 import { useRouter } from "next/router";
 
@@ -6,6 +6,7 @@ const MainTitle = () => {
   const [sentece, setSentence] = useState<string>("");
   const context = useContext(Context);
   const router = useRouter();
+  const t = context?.t;
 
   // Secuencia de tipeo con equivocación "JSSSA", borrado y corrección a "JESUS ALI"
   const sequence = [
@@ -56,7 +57,7 @@ const MainTitle = () => {
     <div className="title-me flex flex-col justify-center">
       <div className="font-mono text-[11px] text-secondary/70 uppercase tracking-widest mb-2 flex items-center gap-2">
         <span className="inline-block w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-        <span>FIG 01 // MAIN_VIEW — POS: X-245 Y-980</span>
+        <span>{t?.mainTitle.fig01 || "FIG 01 // MAIN_VIEW — POS:"} X-245 Y-980</span>
       </div>
       <div className="flex items-baseline min-h-[50px] md:min-h-[75px] my-1">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-primary whitespace-pre leading-none font-sans">
@@ -66,7 +67,7 @@ const MainTitle = () => {
           |
         </span>
       </div>
-      <p className="text-2xl md:text-3xl text-accent font-mono mt-1">Senior Front End Developer</p>
+      <p className="text-2xl md:text-3xl text-accent font-mono mt-1">{t?.mainTitle.role || "Senior Front End Developer"}</p>
       
       {/* Botones de Acción Técnico CAD */}
       <div className="flex flex-wrap gap-3 mt-6">
@@ -74,13 +75,13 @@ const MainTitle = () => {
           onClick={() => handleNavigate('about')}
           className="btn text-sm px-4 py-1.5 h-auto rounded-md cursor-pointer font-mono tracking-wider"
         >
-          EXPLORE SYSTEM →
+          {t?.mainTitle.exploreBtn || "EXPLORE SYSTEM →"}
         </button>
         <button 
           onClick={() => handleNavigate('contact')}
           className="btn text-sm px-4 py-1.5 h-auto rounded-md cursor-pointer font-mono tracking-wider border-lines text-secondary hover:border-accent hover:text-accent"
         >
-          GET IN TOUCH
+          {t?.mainTitle.contactBtn || "GET IN TOUCH"}
         </button>
       </div>
     </div>

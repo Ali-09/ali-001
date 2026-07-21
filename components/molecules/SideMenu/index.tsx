@@ -1,3 +1,5 @@
+import React, { useContext } from "react";
+import Context from "context/Context";
 import { LinkItem } from "components";
 
 interface Tag {
@@ -6,10 +8,13 @@ interface Tag {
 }
 
 const SideMenu = () => {
+  const context = useContext(Context);
+  const t = context?.t;
+
   const tags: Tag[] = [
-    { title: "ME", section: "/" },
-    { title: "ABOUT", section: "about" },
-    { title: "CONTACT", section: "contact" },
+    { title: t?.sideNav.me || "ME", section: "/" },
+    { title: t?.sideNav.about || "ABOUT", section: "about" },
+    { title: t?.sideNav.contact || "CONTACT", section: "contact" },
   ];
 
   return (
@@ -18,7 +23,7 @@ const SideMenu = () => {
       <div className="w-full font-mono text-xs text-primary font-bold uppercase tracking-widest flex items-center justify-between px-2 select-none pb-3">
         <span className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-          <span>SHEETS // NAV.SYS</span>
+          <span>{t?.sideNav.navSys || "SHEETS // NAV.SYS"}</span>
         </span>
         <span className="text-[10px] text-secondary font-mono">v2.4</span>
       </div>
@@ -33,11 +38,11 @@ const SideMenu = () => {
       {/* CAD Sidebar Technical Footer */}
       <div className="hidden md:block w-full font-mono text-[10px] text-secondary pt-4 uppercase tracking-widest space-y-1 select-none">
         <div className="flex justify-between">
-          <span>SCALE:</span>
+          <span>{t?.sideNav.scale || "SCALE:"}</span>
           <span className="text-primary font-bold">1:1</span>
         </div>
         <div className="flex justify-between">
-          <span>SYSTEM:</span>
+          <span>{t?.sideNav.system || "SYSTEM:"}</span>
           <span className="text-accent font-bold">ONLINE [NOMINAL]</span>
         </div>
       </div>
