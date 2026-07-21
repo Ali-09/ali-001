@@ -101,7 +101,7 @@ input:focus, textarea:focus{
 }
 
 .container{
-  @apply h-full w-full px-4 md:px-8 py-4 overflow-hidden flex flex-col justify-center items-center;
+  @apply h-full w-full px-3 md:px-8 py-2 md:py-4 overflow-y-auto md:overflow-hidden flex flex-col justify-start md:justify-center items-center;
 }
 
 .aside{
@@ -109,31 +109,31 @@ input:focus, textarea:focus{
 }
 
 .title{
-  @apply text-5xl md:text-7xl;
+  @apply text-3xl sm:text-5xl md:text-7xl font-bold tracking-tight font-sans;
 }
 
 .text-info{
-  @apply text-xl font-thin text-justify text-secondary;
+  @apply text-xs font-mono text-center text-secondary opacity-70;
 }
 
 .text{
-  @apply text-2xl md:text-3xl text-justify font-thin break-all text-primary opacity-80;
+  @apply text-sm sm:text-base md:text-xl font-sans text-primary opacity-90 leading-relaxed text-left;
 }
 
 .section{
-  @apply flex flex-col h-full;
+  @apply flex flex-col h-full w-full justify-center items-center;
 }
 
 .me{
-  @apply flex flex-col justify-center items-center lg:flex-row w-full h-full gap-6 lg:gap-12;
+  @apply flex flex-col justify-center items-center lg:flex-row w-full h-full gap-4 sm:gap-6 lg:gap-12;
 }
 
 .about{
-  @apply flex flex-col lg:flex-row items-center w-full h-full justify-center gap-6 lg:gap-12;
+  @apply flex flex-col lg:flex-row items-center w-full h-full justify-center gap-3 sm:gap-6 lg:gap-12 py-2 sm:py-0;
 }
 
 .title-about{
-  @apply text-left flex lg:w-2/5 w-full flex-col justify-center;
+  @apply text-left flex lg:w-2/5 w-full flex-col justify-center mb-1 sm:mb-0;
 }
 
 .description-about{
@@ -141,11 +141,11 @@ input:focus, textarea:focus{
 }
 
 .contact{
-  @apply flex flex-col lg:flex-row items-center w-full h-full justify-center gap-6 lg:gap-12;
+  @apply flex flex-col lg:flex-row items-center w-full h-full justify-center gap-3 sm:gap-6 lg:gap-12 py-2 sm:py-0;
 }
 
 .title-contact{
-  @apply text-left flex lg:w-2/5 w-full flex-col justify-center;
+  @apply text-left flex lg:w-2/5 w-full flex-col justify-center mb-1 sm:mb-0;
 }
 
 .form-email{
