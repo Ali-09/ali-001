@@ -49,9 +49,9 @@ const Header: React.FC = () => {
   const currentLang = context?.lang || 'es';
 
   return (
-    <header className="header py-2 sm:py-4 px-2.5 sm:px-6 lg:px-12 flex flex-row items-center justify-between bg-transparent transition-colors duration-300 relative z-20 shrink-0">
+    <header className="header py-2 sm:py-4 px-2 sm:px-6 lg:px-12 flex flex-row items-center justify-between bg-transparent transition-colors duration-300 relative z-20 shrink-0">
       {/* Brand CAD Stamp */}
-      <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
+      <div className="flex items-center gap-1 sm:gap-3 shrink-0">
         <div className="font-mono text-xs xs:text-sm sm:text-lg md:text-xl font-bold tracking-wider text-primary flex items-center gap-1 sm:gap-2 select-none">
           <span className="text-accent font-bold">[</span>
           <span className="whitespace-nowrap">JESUS ALI</span>
@@ -73,10 +73,10 @@ const Header: React.FC = () => {
       </div>
 
       {/* Theme Toggle, Language Toggle & Social Links */}
-      <div className="flex items-center gap-1.5 sm:gap-3">
+      <div className="flex items-center gap-1 sm:gap-2.5">
         <button 
           onClick={toggleLang}
-          className="font-mono text-[10px] sm:text-xs px-2 sm:px-3 py-1 sm:py-1.5 rounded-md border border-lines hover:border-accent text-secondary hover:text-accent bg-surface hover:scale-[1.03] active:scale-95 transition-all duration-200 cursor-pointer flex items-center gap-1 sm:gap-1.5 shadow-sm select-none"
+          className="font-mono text-[9px] xs:text-[10px] sm:text-xs px-1.5 xs:px-2 sm:px-3 py-1 sm:py-1.5 rounded-md border border-lines hover:border-accent text-secondary hover:text-accent bg-surface hover:scale-[1.03] active:scale-95 transition-all duration-200 cursor-pointer flex items-center gap-1 shadow-sm select-none"
           title="Switch Language / Cambiar Idioma"
         >
           <span className="text-accent font-bold">🌐</span>
@@ -85,13 +85,13 @@ const Header: React.FC = () => {
 
         <button 
           onClick={toggleTheme}
-          className="font-mono text-[10px] sm:text-xs px-2 sm:px-3 py-1 sm:py-1.5 rounded-md border border-lines hover:border-accent text-secondary hover:text-accent bg-surface hover:scale-[1.03] active:scale-95 transition-all duration-200 cursor-pointer flex items-center gap-1 sm:gap-1.5 shadow-sm select-none"
+          className="font-mono text-[9px] xs:text-[10px] sm:text-xs px-1.5 xs:px-2 sm:px-3 py-1 sm:py-1.5 rounded-md border border-lines hover:border-accent text-secondary hover:text-accent bg-surface hover:scale-[1.03] active:scale-95 transition-all duration-200 cursor-pointer flex items-center gap-1 shadow-sm select-none"
           title="Toggle CAD Theme"
         >
           <span className="font-semibold">{isDark ? (t?.header.darkTheme || '🌙 DARK') : (t?.header.lightTheme || '☀️ LIGHT')}</span>
         </button>
 
-        <div className="hidden xs:flex items-center border-l border-lines pl-1.5 sm:pl-3">
+        <div className="flex items-center border-l border-lines pl-1 sm:pl-2.5">
           <LinkedInLink/>
           <GithubLink/>
         </div>
