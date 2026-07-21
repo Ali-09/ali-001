@@ -61,7 +61,7 @@ const BodyContact: React.FC = () => {
             </div>
             <TitleGeneral text={t?.contact.title || "CONTACT"}/>
         </div>
-        <div className="form-email border border-lines hover:border-accent hover:-translate-y-0.5 transition-all duration-300 rounded-md p-6 bg-surface relative group shadow-sm">
+        <div className="form-email border border-lines hover:border-accent hover:-translate-y-0.5 transition-all duration-300 rounded-md p-4 sm:p-6 bg-surface relative group shadow-sm">
             <div className="absolute -top-2 -left-2 text-[10px] font-mono text-secondary/50 group-hover:text-accent group-hover:rotate-45 transition-all duration-300 select-none">+</div>
             <div className="absolute -top-2 -right-2 text-[10px] font-mono text-secondary/50 group-hover:text-accent group-hover:rotate-45 transition-all duration-300 select-none">+</div>
             <div className="absolute -bottom-2 -left-2 text-[10px] font-mono text-secondary/50 group-hover:text-accent group-hover:rotate-45 transition-all duration-300 select-none">+</div>
