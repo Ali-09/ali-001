@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
 interface Token {
   text: string;
@@ -31,7 +31,6 @@ const codeSnippets: CodeLine[] = [
 
 const ScreenCode: React.FC = () => {
   const [visibleLines, setVisibleLines] = useState<number>(0);
-  const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -43,22 +42,16 @@ const ScreenCode: React.FC = () => {
           return prev;
         }
       });
-    }, 180);
+    }, 150);
 
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    if (containerRef.current) {
-      containerRef.current.scrollTop = containerRef.current.scrollHeight;
-    }
-  }, [visibleLines]);
-
   return (
     <div className="device w-full">
-      <div id="code_lines" className="code-lines flex flex-col font-mono text-xs md:text-sm shadow-md">
+      <div id="code_lines" className="code-lines flex flex-col font-mono text-xs md:text-sm shadow-sm border border-lines bg-surface rounded-md w-full h-[360px] sm:h-[400px] overflow-hidden">
         {/* Encabezado de Ventana Técnica CAD */}
-        <div className="bg-surface border-b border-lines px-3 py-2 flex items-center justify-between font-mono text-[10px] text-secondary/70 shrink-0 select-none">
+        <div className="bg-surface border-b border-lines px-3 py-2 flex items-center justify-between font-mono text-[10px] text-secondary shrink-0 select-none">
           <div className="flex items-center gap-1.5">
             <span className="w-2.5 h-2.5 rounded-full bg-lines/60"></span>
             <span className="w-2.5 h-2.5 rounded-full bg-lines/60"></span>
@@ -70,27 +63,33 @@ const ScreenCode: React.FC = () => {
           <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
         </div>
         
-        {/* Contenedor de Código con Resaltado de Sintaxis */}
-        <div ref={containerRef} className="p-4 overflow-hidden pointer-events-none select-none grow leading-relaxed space-y-1 bg-surface/50 backdrop-blur-sm">
-          {codeSnippets.slice(0, visibleLines).map((line, idx) => (
-            <div key={idx} className="flex items-center hover:bg-lines/10 px-1 rounded transition-colors duration-150">
-              <span className="text-secondary/40 select-none mr-3 text-[11px] w-6 text-right shrink-0 border-r border-lines/30 pr-2">
-                {line.num}
-              </span>
-              <div className="whitespace-pre">
-                {line.tokens.map((token, tIdx) => (
-                  <span key={tIdx} className={token.className}>
-                    {token.text}
-                  </span>
-                ))}
+        {/* Contenedor de Código con Dimensiones Estables y Pre-reservadas */}
+        <div className="p-4 overflow-hidden pointer-events-none select-none grow leading-relaxed space-y-1 bg-surface flex flex-col justify-start">
+          {codeSnippets.map((line, idx) => {
+            const isVisible = idx < visibleLines;
+            return (
+              <div 
+                key={idx} 
+                className={`flex items-center px-1 rounded h-5 transition-all duration-200 ${
+                  isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-1 pointer-events-none'
+                }`}
+              >
+                <span className="text-secondary/40 select-none mr-3 text-[11px] w-6 text-right shrink-0 border-r border-lines/30 pr-2">
+                  {line.num}
+                </span>
+                <div className="whitespace-pre flex items-center">
+                  {line.tokens.map((token, tIdx) => (
+                    <span key={tIdx} className={token.className}>
+                      {token.text}
+                    </span>
+                  ))}
+                  {idx === visibleLines - 1 && visibleLines < codeSnippets.length && (
+                    <span className="w-1.5 h-3.5 bg-accent animate-pulse ml-1 inline-block"></span>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
-          {visibleLines < codeSnippets.length && (
-            <div className="flex items-center pl-9">
-              <span className="w-2 h-4 bg-accent animate-pulse"></span>
-            </div>
-          )}
+            );
+          })}
         </div>
       </div>
     </div>
