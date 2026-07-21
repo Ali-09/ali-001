@@ -51,10 +51,10 @@ const Header: React.FC = () => {
   return (
     <header className="header pb-2 sm:pb-4 pt-3 sm:pt-6 px-3 sm:px-6 lg:px-12 flex flex-row items-center justify-between bg-transparent transition-colors duration-300">
       {/* Brand CAD Stamp */}
-      <div className="flex items-center gap-2 sm:gap-3">
-        <div className="font-mono text-sm sm:text-lg md:text-xl font-bold tracking-wider text-primary flex items-center gap-1.5 sm:gap-2">
+      <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
+        <div className="font-mono text-xs xs:text-sm sm:text-lg md:text-xl font-bold tracking-wider text-primary flex items-center gap-1 sm:gap-2 select-none">
           <span className="text-accent font-bold">[</span>
-          <span>JESUS ALI</span>
+          <span className="whitespace-nowrap">JESUS ALI</span>
           <span className="text-secondary text-xs font-semibold hidden sm:inline">// DEV.SYS</span>
           <span className="text-accent font-bold">]</span>
         </div>
