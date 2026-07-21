@@ -58,9 +58,13 @@ const MainTitle = () => {
         <span className="inline-block w-2 h-2 rounded-full bg-accent animate-pulse"></span>
         <span>FIG 01 // MAIN_VIEW — POS: X-245 Y-980</span>
       </div>
-      <div className="flex items-center">
-        <h1 className="text-5xl md:text-7xl whitespace-pre">{sentece}</h1>
-        <p className="text-5xl md:text-7xl animate-fade text-accent">|</p>
+      <div className="flex items-baseline min-h-[50px] md:min-h-[75px] my-1">
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-primary whitespace-pre leading-none font-sans">
+          {sentece}
+        </h1>
+        <span className="text-5xl md:text-7xl font-bold animate-fade text-accent leading-none select-none ml-1">
+          |
+        </span>
       </div>
       <p className="text-2xl md:text-3xl text-accent font-mono mt-1">Senior Front End Developer</p>
       
