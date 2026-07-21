@@ -58,7 +58,7 @@ const BodyContact: React.FC = () => {
             </div>
             <TitleGeneral text="CONTACT"/>
         </div>
-        <div className="form-email border border-lines hover:border-accent hover:-translate-y-0.5 transition-all duration-300 rounded-md p-6 bg-surface/60 backdrop-blur-sm relative group shadow-sm">
+        <div className="form-email border border-lines hover:border-accent hover:-translate-y-0.5 transition-all duration-300 rounded-md p-6 bg-surface relative group shadow-sm">
             <div className="absolute -top-2 -left-2 text-[10px] font-mono text-secondary/50 group-hover:text-accent group-hover:rotate-45 transition-all duration-300 select-none">+</div>
             <div className="absolute -top-2 -right-2 text-[10px] font-mono text-secondary/50 group-hover:text-accent group-hover:rotate-45 transition-all duration-300 select-none">+</div>
             <div className="absolute -bottom-2 -left-2 text-[10px] font-mono text-secondary/50 group-hover:text-accent group-hover:rotate-45 transition-all duration-300 select-none">+</div>
@@ -79,28 +79,29 @@ const BodyContact: React.FC = () => {
                 
                 <button 
                   type="submit" 
-                  className="btn my-1 cursor-pointer disabled:opacity-50"
+                  className="btn border-accent text-accent font-bold hover:bg-accent/10 disabled:opacity-50 my-1"
                   disabled={status === 'loading'}
                 >
-                  {status === 'loading' ? 'SENDING...' : 'SEND'}
+                  {status === 'loading' ? 'SENDING...' : 'SEND MESSAGE →'}
                 </button>
 
                 {message && (
-                  <p className={`text-lg my-1 text-center font-normal ${
+                  <p className={`text-sm font-mono my-2 text-center ${
                     status === 'success' ? 'text-emerald-400' : 'text-red-400'
                   }`}>
                     {message}
                   </p>
                 )}
 
-                <div className="flex flex-col mt-4">
-                  <p className="text-info text-center mb-2">Or download it directly here:</p>
+                <div className="flex flex-col mt-4 pt-4 border-t border-lines/40">
+                  <p className="font-mono text-xs text-secondary text-center mb-3">Or download it directly here:</p>
                   <a 
                     href="/cv-jesus-ali.pdf" 
                     download="CV_Jesus_Ali.pdf" 
-                    className="btn my-1 flex items-center justify-center cursor-pointer select-none text-center"
+                    className="btn my-1"
                   >
-                    DOWNLOAD CV (PDF)
+                    <span>DOWNLOAD CV (PDF)</span>
+                    <span className="text-accent font-bold">↓</span>
                   </a>
                 </div>
 

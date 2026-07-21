@@ -9,7 +9,7 @@ const BodyAbout: React.FC = () => {
                 </div>
                 <TitleGeneral text="ABOUT"/>
             </div>
-            <div className="description-about border border-lines hover:border-accent hover:-translate-y-0.5 transition-all duration-300 rounded-md p-6 bg-surface/60 backdrop-blur-sm relative group shadow-sm">
+            <div className="description-about border border-lines hover:border-accent hover:-translate-y-0.5 transition-all duration-300 rounded-md p-6 bg-surface relative group shadow-sm">
                 <div className="absolute -top-2 -left-2 text-[10px] font-mono text-secondary/50 group-hover:text-accent group-hover:rotate-45 transition-all duration-300 select-none">+</div>
                 <div className="absolute -top-2 -right-2 text-[10px] font-mono text-secondary/50 group-hover:text-accent group-hover:rotate-45 transition-all duration-300 select-none">+</div>
                 <div className="absolute -bottom-2 -left-2 text-[10px] font-mono text-secondary/50 group-hover:text-accent group-hover:rotate-45 transition-all duration-300 select-none">+</div>
@@ -27,7 +27,7 @@ const BodyAbout: React.FC = () => {
                     <a 
                       href="/cv-jesus-ali.pdf" 
                       download="CV_Jesus_Ali.pdf"
-                      className="btn text-xs px-4 py-2 h-auto rounded-md font-mono tracking-wider flex items-center gap-2 border-lines hover:border-accent text-secondary hover:text-accent cursor-pointer"
+                      className="btn text-xs whitespace-nowrap"
                     >
                       <span>DOWNLOAD CV (PDF)</span>
                       <span className="text-accent font-bold">↓</span>
