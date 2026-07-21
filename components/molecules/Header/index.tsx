@@ -28,39 +28,39 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="header border-b border-lines/40 pb-4 pt-6 px-6 lg:px-12 flex flex-row items-center justify-between bg-background/50 backdrop-blur-md transition-colors duration-300">
+    <header className="header border-b border-lines pb-4 pt-6 px-6 lg:px-12 flex flex-row items-center justify-between bg-surface transition-colors duration-300 shadow-sm">
       {/* Brand CAD Stamp */}
       <div className="flex items-center gap-3">
         <div className="font-mono text-lg md:text-xl font-bold tracking-wider text-primary flex items-center gap-2">
           <span className="text-accent font-bold">[</span>
           <span>JESUS ALI</span>
-          <span className="text-secondary text-xs font-normal hidden sm:inline">// DEV.SYS</span>
+          <span className="text-secondary text-xs font-semibold hidden sm:inline">// DEV.SYS</span>
           <span className="text-accent font-bold">]</span>
         </div>
       </div>
 
       {/* Center CAD Metadata */}
-      <div className="hidden md:flex items-center gap-3 font-mono text-[11px] text-secondary/80 uppercase tracking-widest bg-surface/50 border border-lines/50 px-3 py-1 rounded-full">
+      <div className="hidden md:flex items-center gap-3 font-mono text-[11px] text-secondary uppercase tracking-widest bg-surface border border-lines px-3.5 py-1.5 rounded-full shadow-sm">
         <span className="flex items-center gap-1.5">
-          <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
-          <span>SYS.REF: CAD-001</span>
+          <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+          <span className="font-semibold text-primary">SYS.REF: CAD-001</span>
         </span>
-        <span>|</span>
-        <span>REV 2.4</span>
-        <span>|</span>
-        <span>SCALE 1:1</span>
+        <span className="text-lines font-bold">|</span>
+        <span className="font-semibold">REV 2.4</span>
+        <span className="text-lines font-bold">|</span>
+        <span className="font-semibold">SCALE 1:1</span>
       </div>
 
       {/* Theme Toggle & Social Links */}
       <div className="flex items-center gap-3">
         <button 
           onClick={toggleTheme}
-          className="font-mono text-xs px-2.5 py-1 rounded border border-lines/70 hover:border-accent text-secondary hover:text-accent hover:scale-[1.03] active:scale-95 transition-all duration-200 cursor-pointer flex items-center gap-1.5 bg-surface/40"
+          className="font-mono text-xs px-3 py-1.5 rounded-md border border-lines hover:border-accent text-secondary hover:text-accent bg-surface hover:scale-[1.03] active:scale-95 transition-all duration-200 cursor-pointer flex items-center gap-1.5 shadow-sm"
           title="Toggle CAD Theme"
         >
-          <span>{isDark ? '☀️ LIGHT' : '🌙 DARK'}</span>
+          <span className="font-semibold">{isDark ? '☀️ LIGHT' : '🌙 DARK'}</span>
         </button>
-        <div className="flex items-center border-l border-lines/50 pl-3">
+        <div className="flex items-center border-l border-lines pl-3">
           <LinkedInLink/>
           <GithubLink/>
         </div>

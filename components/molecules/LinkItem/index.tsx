@@ -34,18 +34,18 @@ const LinkItem = ({ tag, index }: IProps) => {
       }}
       className={`group w-full flex items-center justify-between px-4 py-3 rounded-md border font-mono transition-all duration-200 cursor-pointer shadow-sm ${
         isActive
-          ? 'bg-accent/15 border-accent text-accent font-bold ring-1 ring-accent/30'
-          : 'bg-surface/60 border-lines/50 text-primary hover:text-accent hover:border-accent/70 hover:bg-surface'
+          ? 'bg-surface border-accent text-accent font-bold ring-1 ring-accent'
+          : 'bg-surface border-lines text-primary hover:text-accent hover:border-accent'
       }`}
     >
       <div className="flex items-center justify-center gap-2.5 w-full">
-        <span className={`text-xs font-mono select-none ${isActive ? 'text-accent font-bold' : 'text-secondary font-medium'}`}>
+        <span className={`text-xs font-mono select-none ${isActive ? 'text-accent font-bold' : 'text-secondary font-semibold'}`}>
           {formattedIndex} //
         </span>
         <div className="flex items-center justify-center">
-          <OpenTagIcon className={`w-3.5 h-3.5 shrink-0 group-hover:-translate-x-0.5 transition-transform duration-200 ${isActive ? 'text-accent' : 'text-accent/80'}`} />
-          <span className="text-sm md:text-base px-1.5 font-semibold tracking-wider uppercase">{tag.title}</span>
-          <EndTagIcon className={`w-3.5 h-3.5 shrink-0 group-hover:translate-x-0.5 transition-transform duration-200 ${isActive ? 'text-accent' : 'text-accent/80'}`} />
+          <OpenTagIcon className={`w-3.5 h-3.5 shrink-0 group-hover:-translate-x-0.5 transition-transform duration-200 ${isActive ? 'text-accent' : 'text-accent'}`} />
+          <span className="text-sm md:text-base px-1.5 font-bold tracking-wider uppercase">{tag.title}</span>
+          <EndTagIcon className={`w-3.5 h-3.5 shrink-0 group-hover:translate-x-0.5 transition-transform duration-200 ${isActive ? 'text-accent' : 'text-accent'}`} />
         </div>
       </div>
       {isActive && (

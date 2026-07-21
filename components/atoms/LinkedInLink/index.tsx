@@ -7,7 +7,7 @@ const LinkedInLink: React.FC = () => {
       href="https://www.linkedin.com/in/jesusrdzali/" 
       rel="noreferrer"
       aria-label="LinkedIn Profile"
-      className="font-mono text-xs px-2.5 py-1 rounded-md border border-lines/70 hover:border-accent text-secondary hover:text-accent bg-surface/60 hover:bg-surface transition-all duration-200 cursor-pointer flex items-center gap-1.5 shadow-sm hover:scale-[1.04] active:scale-95 group"
+      className="font-mono text-xs px-3 py-1.5 rounded-md border border-lines hover:border-accent text-secondary hover:text-accent bg-surface transition-all duration-200 cursor-pointer flex items-center gap-1.5 shadow-sm hover:scale-[1.04] active:scale-95 group"
       title="LinkedIn Profile"
     >
       <svg 
