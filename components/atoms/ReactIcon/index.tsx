@@ -8,7 +8,7 @@ const ReactIcon = ({primaryColor, secondColor}: IProps) => {
     return (
         <svg version="1.1" className="w-3/12 h-full svg-opacity" x="0px" y="0px" viewBox="0 0 512 512">
 
-            <path id="borderPrincipal" vectorEffect="non-scaling-stroke" fill="none" className="path-border" stroke="#F87171" strokeWidth="5" strokeLinecap="square" strokeMiterlimit="2" d="M480,256L480,256c0-28.6-37.2-55.6-94.1-72.4C399,127.7,393.2,83.2,367.4,69
+            <path id="borderPrincipal" vectorEffect="non-scaling-stroke" fill="none" className="path-border" stroke="var(--accent)" strokeWidth="5" strokeLinecap="square" strokeMiterlimit="2" d="M480,256L480,256c0-28.6-37.2-55.6-94.1-72.4C399,127.7,393.2,83.2,367.4,69
                 c-5.9-3.3-12.8-4.9-20.4-4.9V64c-25.1,0-58,17.2-91.2,47.1c-33.2-29.7-66.1-46.8-91.2-46.8v0.1c-7.7,0-14.6,1.6-20.6,4.9
                 c-25.7,14.2-31.4,58.6-18.2,114.3C69,200.6,32,227.6,32,256c0,28.6,37.2,55.6,94.1,72.4c-13.1,55.9-7.3,100.4,18.4,114.6
                 c5.9,3.3,12.9,4.9,20.5,4.9c25.1,0,58-17.2,91.2-47.1c33.2,29.7,66.1,46.8,91.2,46.8c7.7,0,14.6-1.6,20.6-4.9
@@ -32,7 +32,7 @@ const ReactIcon = ({primaryColor, secondColor}: IProps) => {
                 c-18.9,0-46.9-14.5-76.7-41c12.8-12.9,25.6-27.6,37.7-43.9c20.6-2.1,40.2-5.4,58.1-9.7c2.1,8.9,3.7,17.4,4.7,25.6
                 C375.5,392.7,370.2,418.8,357.9,425.8z M406.4,300.5L406.4,300.5c-7.9,3.3-16.4,6.2-25.3,8.9c-5.2-17.2-12.1-35.2-20.5-53.5
                 c8.4-18.3,15.2-36.1,20.3-53.3c9,2.7,17.6,5.7,25.7,9c32.3,13.3,53.2,30.7,53.2,44.5C459.6,269.8,438.7,287.3,406.4,300.5z"/>
-            <circle id="borderCircle" vectorEffect="non-scaling-stroke" fill="none" className="path-border" stroke="#F87171" strokeWidth="5" strokeLinecap="square" strokeMiterlimit="2" cx="256" cy="256" r="32"/>
+            <circle id="borderCircle" vectorEffect="non-scaling-stroke" fill="none" className="path-border" stroke="var(--accent)" strokeWidth="5" strokeLinecap="square" strokeMiterlimit="2" cx="256" cy="256" r="32"/>
             <path id="principal" fill={secondColor} d="M480,256c0-28.6-37.2-55.6-94.1-72.4C399,127.7,393.2,83.2,367.4,69c-5.9-3.3-12.9-4.9-20.5-4.9
                 v19.6c4.2,0,7.6,0.8,10.4,2.3c12.4,6.9,17.8,33,13.6,66.5c-1,8.3-2.6,17-4.7,25.8c-17.9-4.2-37.4-7.5-58-9.6
                 c-12.3-16.3-25.1-31-38-43.9C300.1,98.2,328,83.6,347,83.6V64c-25.1,0-58,17.2-91.2,47.1c-33.2-29.7-66.1-46.8-91.2-46.8V84

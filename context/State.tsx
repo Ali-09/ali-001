@@ -1,13 +1,14 @@
-import { ReactNode, useReducer } from 'react'
+import { ReactNode, useState, useEffect, useReducer } from 'react'
 import Reducer, { Action } from './Reducer'
 import Context from './Context'
+import { Language, translations } from './translations'
 
 interface ContextProviderProps {
   children: ReactNode;
 }
 
 export interface State {
-    section: string;
+  section: string;
 }
 
 const State = ({ children }: ContextProviderProps) => {
@@ -16,6 +17,22 @@ const State = ({ children }: ContextProviderProps) => {
   };
 
   const [state, dispatch] = useReducer((state: State, action: Action) => Reducer(state, action), initialState);
+  const [lang, setLangState] = useState<Language>('es');
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem('lang') as Language | null;
+    if (savedLang === 'en' || savedLang === 'es') {
+      setLangState(savedLang);
+    } else {
+      const browserLang = navigator.language.startsWith('es') ? 'es' : 'en';
+      setLangState(browserLang);
+    }
+  }, []);
+
+  const setLang = (newLang: Language) => {
+    setLangState(newLang);
+    localStorage.setItem('lang', newLang);
+  };
 
   const setSection = (section: string) => {
     dispatch({
@@ -27,7 +44,10 @@ const State = ({ children }: ContextProviderProps) => {
   return (
     <Context.Provider value={{
       section: state.section,
-      setSection
+      setSection,
+      lang,
+      setLang,
+      t: translations[lang]
     }}>
       {children}
     </Context.Provider>

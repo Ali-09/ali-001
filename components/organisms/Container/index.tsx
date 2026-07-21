@@ -36,6 +36,16 @@ const Container = ({ children }: ContainerProps) => {
   // Router
   const router = useRouter();
 
+  const [isScrolling, setIsScrolling] = useState<boolean>(false);
+
+  // Sincronizar ruta actual con el estado del contexto (Atrás/Adelante y acceso directo por URL)
+  useEffect(() => {
+    const currentPath = router.pathname === '/' ? '/' : router.pathname.replace('/', '');
+    if (sections.includes(currentPath) && currentPath !== section) {
+      setSection(currentPath);
+    }
+  }, [router.pathname]);
+
   useEffect(() => {
     return () => {
       if (idTimeout.current) clearTimeout(idTimeout.current);
@@ -51,47 +61,66 @@ const Container = ({ children }: ContainerProps) => {
     setSwipeY(firstTouch.clientY);
   };
 
-  // Manejar movimiento de toque
+  // Manejar movimiento de toque con throttling
   const handleTouchMove = (e: TouchEvent) => {
+    if (isScrolling || !swipeY) return;
+
     const sectionPosition = sections.indexOf(section);
-
-    if (!swipeY) {
-      return;
-    }
-
     let yUp = e.touches[0].clientY;
     let yDiff = swipeY - yUp;
 
+    if (Math.abs(yDiff) < 40) return; // Umbral mínimo de movimiento
+
+    let nextIndex = sectionPosition;
     if (yDiff > 0) {
-      const nextSection = sectionPosition < 1 ? sections[sectionPosition] : sections[sectionPosition - 1];
-      setSection(nextSection);
-      router.push(nextSection);
+      // Swiped UP -> ir a la siguiente sección
+      nextIndex = sectionPosition < sections.length - 1 ? sectionPosition + 1 : sectionPosition;
     } else {
-      const nextSection = sectionPosition + 1 !== sections.length ? sections[sectionPosition + 1] : sections[sectionPosition];
-      setSection(nextSection);
-      router.push(nextSection);
+      // Swiped DOWN -> ir a la sección anterior
+      nextIndex = sectionPosition > 0 ? sectionPosition - 1 : 0;
     }
 
+    if (nextIndex === sectionPosition) return;
+
+    setIsScrolling(true);
+    setAnimation(yDiff > 0 ? 'sideUp' : 'sideDown');
+    const nextSection = sections[nextIndex];
+    setSection(nextSection);
+    router.push(nextSection);
     setSwipeY(null);
+
+    if (idTimeout.current) clearTimeout(idTimeout.current);
+    idTimeout.current = setTimeout(() => {
+      setIsScrolling(false);
+    }, 800);
   };
 
-  // Manejar rueda del mouse
+  // Manejar rueda del mouse con throttling de eventos
   const handleWheel = (e: WheelEvent) => {
+    if (isScrolling || Math.abs(e.deltaY) < 10) return;
+
     const sectionPosition = sections.indexOf(section);
+    const isGoingDown = e.deltaY > 0;
 
-    setAnimation(e.deltaY < 0 ? 'sideDown' : 'sideUp');
+    let nextIndex = sectionPosition;
+    if (isGoingDown) {
+      nextIndex = sectionPosition < sections.length - 1 ? sectionPosition + 1 : sectionPosition;
+    } else {
+      nextIndex = sectionPosition > 0 ? sectionPosition - 1 : 0;
+    }
 
+    if (nextIndex === sectionPosition) return;
+
+    setIsScrolling(true);
+    setAnimation(isGoingDown ? 'sideUp' : 'sideDown');
+    const nextSection = sections[nextIndex];
+    setSection(nextSection);
+    router.push(nextSection);
+
+    if (idTimeout.current) clearTimeout(idTimeout.current);
     idTimeout.current = setTimeout(() => {
-      if (e.deltaY < 0) {
-        const prevSection = sectionPosition < 1 ? sections[sectionPosition] : sections[sectionPosition - 1];
-        setSection(prevSection);
-        router.push(prevSection);
-      } else {
-        const nextSection = sectionPosition + 1 !== sections.length ? sections[sectionPosition + 1] : sections[sectionPosition];
-        setSection(nextSection);
-        router.push(nextSection);
-      }
-    }, 600);
+      setIsScrolling(false);
+    }, 800);
   };
 
   return (
@@ -105,7 +134,7 @@ const Container = ({ children }: ContainerProps) => {
         <CSSTransition
           nodeRef={nodeRef}
           key={section}
-          timeout={450}
+          timeout={250}
           classNames={animation}
         >
           <div ref={nodeRef} className="section">

@@ -3,7 +3,7 @@ import State from '@ctx/State'
 import { CoreTemplate } from 'components'
 import { AppProps } from 'next/app'
 
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+function MyApp({ Component, pageProps }: AppProps): React.JSX.Element {
   return (
       <State>
         <CoreTemplate>

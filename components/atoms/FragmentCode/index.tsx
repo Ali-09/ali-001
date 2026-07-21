@@ -1,8 +1,8 @@
 const FragmentCode: React.FC = () => {
 
     const getBG = () => {
-        const colors = ['bg-emerald-300', 'bg-red-300', 'bg-blue-300']
-        return colors[Math.floor(Math.random() * (3 - 0) + 0)]
+        const colors = ['bg-lines', 'bg-secondary/40', 'bg-accent/40']
+        return colors[Math.floor(Math.random() * 3)]
     }
 
     const getWidth = () => {

@@ -5,6 +5,7 @@ export { default as ReactIcon } from 'components/atoms/ReactIcon';
 export { default as VueIcon } from 'components/atoms/VueIcon';
 export { default as GithubLink } from 'components/atoms/GithubLink';
 export { default as LinkedInLink } from 'components/atoms/LinkedInLink';
+export { default as CADBlueprintOverlay } from 'components/atoms/CADBlueprintOverlay';
 
 //Molecules
 export { default as MainTitle } from 'components/molecules/MainTitle';
