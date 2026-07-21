@@ -4,7 +4,7 @@ const CADBlueprintOverlay: React.FC = () => {
   return (
     <div className="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden" aria-hidden="true">
       {/* Marco CAD de Lienzo Principal (Enmarcado entre Header, Footer y SideNav) */}
-      <div className="absolute top-28 sm:top-24 bottom-10 sm:bottom-12 left-3 sm:left-6 md:left-64 right-3 sm:right-6 md:right-6 border border-lines/25 rounded-sm">
+      <div className="absolute top-28 sm:top-24 bottom-10 sm:bottom-12 left-4 sm:left-8 md:left-64 right-4 sm:right-8 md:right-6 border border-lines/25 rounded-sm">
         {/* Línea Láser de Escaneo Sutil */}
         <div className="absolute left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-accent/40 to-transparent shadow-[0_0_8px_rgba(255,182,72,0.3)] animate-laser-scan"></div>
 
