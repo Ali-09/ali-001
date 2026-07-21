@@ -55,9 +55,9 @@ const MainTitle = () => {
 
   return (
     <div className="title-me flex flex-col justify-center">
-      <div className="font-mono text-[11px] text-secondary/70 uppercase tracking-widest mb-2 flex items-center gap-2">
-        <span className="inline-block w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-        <span>{t?.mainTitle.fig01 || "FIG 01 // MAIN_VIEW — POS:"} X-245 Y-980</span>
+      <div className="font-mono text-[9px] xs:text-[10px] sm:text-[11px] text-secondary/70 uppercase tracking-widest mb-1.5 flex items-center gap-1.5 whitespace-nowrap overflow-hidden text-ellipsis">
+        <span className="inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-accent animate-pulse shrink-0"></span>
+        <span className="truncate">{t?.mainTitle.fig01 || "FIG 01 // MAIN_VIEW — POS:"} X-245 Y-980</span>
       </div>
       <div className="flex items-baseline min-h-[36px] sm:min-h-[50px] md:min-h-[75px] my-1">
         <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-primary whitespace-pre leading-none font-sans">

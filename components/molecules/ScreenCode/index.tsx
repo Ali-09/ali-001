@@ -49,7 +49,7 @@ const ScreenCode: React.FC = () => {
 
   return (
     <div className="device w-full">
-      <div id="code_lines" className="code-lines flex flex-col font-mono text-[10px] xs:text-xs md:text-sm shadow-sm border border-lines bg-surface rounded-md w-full h-[280px] xs:h-[320px] sm:h-[360px] md:h-[400px] overflow-hidden">
+      <div id="code_lines" className="code-lines flex flex-col font-mono text-[9px] xs:text-xs md:text-sm shadow-sm border border-lines bg-surface rounded-md w-full h-[250px] xs:h-[290px] sm:h-[360px] md:h-[400px] overflow-hidden">
         {/* Encabezado de Ventana Técnica CAD */}
         <div className="bg-surface border-b border-lines px-2.5 sm:px-3 py-1.5 sm:py-2 flex items-center justify-between font-mono text-[9px] sm:text-[10px] text-secondary shrink-0 select-none">
           <div className="flex items-center gap-1.5">
