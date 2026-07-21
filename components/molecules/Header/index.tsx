@@ -49,7 +49,7 @@ const Header: React.FC = () => {
   const currentLang = context?.lang || 'es';
 
   return (
-    <header className="header py-2 sm:py-4 px-2 sm:px-6 lg:px-12 flex flex-row items-center justify-between bg-transparent transition-colors duration-300 relative z-20 shrink-0">
+    <header className="header py-2 sm:py-4 px-4 sm:px-8 lg:px-12 flex flex-row items-center justify-between bg-transparent transition-colors duration-300 relative z-20 shrink-0">
       {/* Brand CAD Stamp */}
       <div className="flex items-center gap-1 sm:gap-3 shrink-0">
         <div className="font-mono text-xs xs:text-sm sm:text-lg md:text-xl font-bold tracking-wider text-primary flex items-center gap-1 sm:gap-2 select-none">
