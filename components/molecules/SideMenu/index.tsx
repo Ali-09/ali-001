@@ -1,48 +1,46 @@
-import React from "react";
 import { LinkItem } from "components";
 
 interface Tag {
   title: string;
   section: string;
-  index: string;
 }
 
-const SideMenu: React.FC = () => {
+const SideMenu = () => {
   const tags: Tag[] = [
-    { title: "ME", section: "/", index: "01" },
-    { title: "ABOUT", section: "about", index: "02" },
-    { title: "CONTACT", section: "contact", index: "03" },
+    { title: "ME", section: "/" },
+    { title: "ABOUT", section: "about" },
+    { title: "CONTACT", section: "contact" },
   ];
 
   return (
-    <aside className="aside flex flex-col justify-center px-2 py-4 md:py-8 md:px-4 w-full md:w-64 shrink-0">
-      <div className="border border-lines/60 rounded-lg p-3 bg-surface/30 backdrop-blur-sm shadow-sm flex flex-col gap-1 relative">
-        {/* Marcas de Esquina CAD */}
-        <div className="absolute -top-1.5 -left-1.5 text-[9px] font-mono text-secondary/40 select-none">+</div>
-        <div className="absolute -top-1.5 -right-1.5 text-[9px] font-mono text-secondary/40 select-none">+</div>
-        <div className="absolute -bottom-1.5 -left-1.5 text-[9px] font-mono text-secondary/40 select-none">+</div>
-        <div className="absolute -bottom-1.5 -right-1.5 text-[9px] font-mono text-secondary/40 select-none">+</div>
-
-        {/* Encabezado del Panel de Navegación */}
-        <div className="flex items-center justify-between pb-2 border-b border-lines/40 mb-1 px-1">
-          <span className="font-mono text-[10px] text-secondary/70 uppercase tracking-widest font-semibold flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
-            SEC.NAV // INDEX
+    <aside className="aside w-full md:w-52 lg:w-60 border-b md:border-b-0 md:border-r border-lines/40 p-4 flex flex-col justify-between bg-surface/30 backdrop-blur-sm shrink-0">
+      <div>
+        {/* CAD Navigation Header Label */}
+        <div className="font-mono text-[10px] text-secondary/70 uppercase tracking-widest mb-4 flex items-center justify-between px-1 select-none border-b border-lines/30 pb-2">
+          <span className="flex items-center gap-1.5 font-bold text-primary">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
+            <span>SHEETS // NAV.SYS</span>
           </span>
-          <span className="font-mono text-[9px] text-secondary/50">SYS.v2</span>
+          <span className="text-[9px] text-secondary/50 font-normal">CAD-VIEW</span>
         </div>
 
-        {/* Lista de Enlaces */}
-        <div className="flex flex-row md:flex-col justify-around md:justify-start gap-1">
+        {/* Navigation Sheet Buttons */}
+        <div className="flex flex-row md:flex-col gap-2 overflow-x-auto md:overflow-x-visible">
           {tags.map((tag: Tag, k: number) => (
-            <LinkItem tag={tag} key={k} />
+            <LinkItem tag={tag} index={k + 1} key={k} />
           ))}
         </div>
+      </div>
 
-        {/* Pie de guía CAD del Menú Lateral */}
-        <div className="hidden md:flex items-center justify-between pt-2 border-t border-lines/30 mt-1 px-1 font-mono text-[9px] text-secondary/50">
-          <span>NAVIGATION TRACK</span>
-          <span className="text-accent font-semibold">● ACTIVE</span>
+      {/* CAD Sidebar Technical Footer */}
+      <div className="hidden md:block font-mono text-[9px] text-secondary/50 pt-4 border-t border-lines/30 uppercase tracking-widest space-y-1 select-none">
+        <div className="flex justify-between">
+          <span>SCALE:</span>
+          <span className="text-primary font-semibold">1:1</span>
+        </div>
+        <div className="flex justify-between">
+          <span>SYSTEM:</span>
+          <span className="text-primary font-semibold">NOMINAL</span>
         </div>
       </div>
     </aside>
