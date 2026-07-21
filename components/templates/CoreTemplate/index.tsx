@@ -1,5 +1,4 @@
-import { SideMenu, Container } from "components";
-import { Header } from 'components'
+import { SideMenu, Container, Header, CADBlueprintOverlay } from "components";
 
 interface IProps {
   children: React.ReactNode
@@ -7,9 +6,10 @@ interface IProps {
 
 const CoreTemplate: React.FC<IProps> = ({ children }) => {
   return (
-    <div className="main flex flex-col justify-between h-screen overflow-hidden">
+    <div className="main flex flex-col justify-between h-screen overflow-hidden relative">
+      <CADBlueprintOverlay />
       <Header/>
-      <div className="content">
+      <div className="content relative z-10">
           <SideMenu />
           <Container>{children}</Container>
       </div>
