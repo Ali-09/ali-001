@@ -4,36 +4,59 @@ const CADBlueprintOverlay: React.FC = () => {
   return (
     <div className="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden" aria-hidden="true">
       {/* Marco CAD de Lienzo Principal (Enmarcado entre Header, Footer y SideNav) */}
-      <div className="absolute top-20 bottom-12 left-4 md:left-64 right-4 md:right-6 border border-lines/20 rounded-sm">
-        {/* Esquina Superior Izquierda */}
-        <div className="absolute -top-2.5 -left-1 font-mono text-[9px] text-secondary/40 flex items-center gap-1 bg-background px-1">
-          <span className="text-accent/60 font-bold">┌</span>
+      <div className="absolute top-20 bottom-12 left-4 md:left-64 right-4 md:right-6 border border-lines/25 rounded-sm">
+        {/* Línea Láser de Escaneo Sutil */}
+        <div className="absolute left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-accent/40 to-transparent shadow-[0_0_8px_rgba(255,182,72,0.3)] animate-laser-scan"></div>
+
+        {/* Esquina Superior Izquierda con bloque de título de ingeniería */}
+        <div className="absolute -top-2.5 -left-1 font-mono text-[9px] text-secondary/50 flex items-center gap-1.5 bg-background px-1.5">
+          <span className="text-accent font-bold">┌</span>
           <span>SYS.ORIGIN [0,0]</span>
+          <span className="text-lines font-bold">|</span>
+          <span className="hidden sm:inline">DRAWN BY: J. ALI</span>
         </div>
 
         {/* Esquina Superior Derecha */}
-        <div className="absolute -top-2.5 -right-1 font-mono text-[9px] text-secondary/40 flex items-center gap-1 bg-background px-1">
+        <div className="absolute -top-2.5 -right-1 font-mono text-[9px] text-secondary/50 flex items-center gap-1.5 bg-background px-1.5">
+          <span className="hidden sm:inline font-mono">PROJ: BLUEPRINT-V2</span>
+          <span className="text-lines font-bold hidden sm:inline">|</span>
           <span>DATUM.REF [1400,0]</span>
-          <span className="text-accent/60 font-bold">┐</span>
+          <span className="text-accent font-bold">┐</span>
         </div>
 
         {/* Esquina Inferior Izquierda */}
-        <div className="absolute -bottom-2.5 -left-1 font-mono text-[9px] text-secondary/40 flex items-center gap-1 bg-background px-1">
-          <span className="text-accent/60 font-bold">└</span>
+        <div className="absolute -bottom-2.5 -left-1 font-mono text-[9px] text-secondary/50 flex items-center gap-1.5 bg-background px-1.5">
+          <span className="text-accent font-bold">└</span>
           <span>FRAME.LIMIT [0,900]</span>
+          <span className="text-lines font-bold hidden sm:inline">|</span>
+          <span className="hidden sm:inline">SCALE: NTS</span>
         </div>
 
         {/* Esquina Inferior Derecha */}
-        <div className="absolute -bottom-2.5 -right-1 font-mono text-[9px] text-secondary/40 flex items-center gap-1 bg-background px-1">
+        <div className="absolute -bottom-2.5 -right-1 font-mono text-[9px] text-secondary/50 flex items-center gap-1.5 bg-background px-1.5">
+          <span className="hidden sm:inline">SHEET: DA-001/008</span>
+          <span className="text-lines font-bold hidden sm:inline">|</span>
           <span>CAD.LAYER // v2.4</span>
-          <span className="text-accent/60 font-bold">┘</span>
+          <span className="text-accent font-bold">┘</span>
         </div>
 
-        {/* Cruces Cuadrantes Reticulares Internas (+ Marks) */}
-        <div className="absolute top-6 left-6 font-mono text-[10px] text-secondary/25">+</div>
-        <div className="absolute top-6 right-6 font-mono text-[10px] text-secondary/25">+</div>
-        <div className="absolute bottom-6 left-6 font-mono text-[10px] text-secondary/25">+</div>
-        <div className="absolute bottom-6 right-6 font-mono text-[10px] text-secondary/25">+</div>
+        {/* Nodos de Diana Cuadrantes CAD (Target Reticles ⊕) */}
+        <div className="absolute top-6 left-6 font-mono text-[10px] text-accent/50 flex items-center gap-1 animate-pulse">
+          <span>⊕</span>
+          <span className="text-[8px] text-secondary/30 hidden lg:inline">NODE-01</span>
+        </div>
+        <div className="absolute top-6 right-6 font-mono text-[10px] text-accent/50 flex items-center gap-1 animate-pulse">
+          <span className="text-[8px] text-secondary/30 hidden lg:inline">NODE-02</span>
+          <span>⊕</span>
+        </div>
+        <div className="absolute bottom-6 left-6 font-mono text-[10px] text-accent/50 flex items-center gap-1 animate-pulse">
+          <span>⊕</span>
+          <span className="text-[8px] text-secondary/30 hidden lg:inline">NODE-03</span>
+        </div>
+        <div className="absolute bottom-6 right-6 font-mono text-[10px] text-accent/50 flex items-center gap-1 animate-pulse">
+          <span className="text-[8px] text-secondary/30 hidden lg:inline">NODE-04</span>
+          <span>⊕</span>
+        </div>
       </div>
     </div>
   );
