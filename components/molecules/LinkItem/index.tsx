@@ -32,24 +32,24 @@ const LinkItem = ({ tag, index }: IProps) => {
         setSection(tag.section);
         router.push(tag.section);
       }}
-      className={`group w-full flex items-center justify-between px-4 py-3 rounded-md border font-mono transition-all duration-200 cursor-pointer ${
+      className={`group w-full flex items-center justify-between px-2 sm:px-4 py-1.5 sm:py-3 rounded-md border font-mono transition-all duration-200 cursor-pointer ${
         isActive
           ? 'bg-accent/15 border-accent text-accent font-bold ring-1 ring-accent'
           : 'bg-transparent border-lines/60 text-primary hover:text-accent hover:border-accent hover:bg-surface/30'
       }`}
     >
-      <div className="flex items-center justify-center gap-2.5 w-full">
-        <span className={`text-xs font-mono select-none ${isActive ? 'text-accent font-bold' : 'text-secondary font-semibold'}`}>
+      <div className="flex items-center justify-center gap-1.5 sm:gap-2.5 w-full">
+        <span className={`text-[10px] sm:text-xs font-mono select-none ${isActive ? 'text-accent font-bold' : 'text-secondary font-semibold'}`}>
           {formattedIndex} //
         </span>
         <div className="flex items-center justify-center">
-          <OpenTagIcon className={`w-3.5 h-3.5 shrink-0 group-hover:-translate-x-0.5 transition-transform duration-200 ${isActive ? 'text-accent' : 'text-accent'}`} />
-          <span className="text-sm md:text-base px-1.5 font-bold tracking-wider uppercase">{tag.title}</span>
-          <EndTagIcon className={`w-3.5 h-3.5 shrink-0 group-hover:translate-x-0.5 transition-transform duration-200 ${isActive ? 'text-accent' : 'text-accent'}`} />
+          <OpenTagIcon className={`w-3 sm:w-3.5 h-3 sm:h-3.5 shrink-0 group-hover:-translate-x-0.5 transition-transform duration-200 ${isActive ? 'text-accent' : 'text-accent'}`} />
+          <span className="text-xs sm:text-sm md:text-base px-1 sm:px-1.5 font-bold tracking-wider uppercase whitespace-nowrap">{tag.title}</span>
+          <EndTagIcon className={`w-3 sm:w-3.5 h-3 sm:h-3.5 shrink-0 group-hover:translate-x-0.5 transition-transform duration-200 ${isActive ? 'text-accent' : 'text-accent'}`} />
         </div>
       </div>
       {isActive && (
-        <span className="w-2 h-2 rounded-full bg-accent animate-pulse shrink-0 ml-1"></span>
+        <span className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-accent animate-pulse shrink-0 ml-1"></span>
       )}
     </button>
   );

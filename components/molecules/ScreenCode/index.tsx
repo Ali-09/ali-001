@@ -49,22 +49,22 @@ const ScreenCode: React.FC = () => {
 
   return (
     <div className="device w-full">
-      <div id="code_lines" className="code-lines flex flex-col font-mono text-xs md:text-sm shadow-sm border border-lines bg-surface rounded-md w-full h-[360px] sm:h-[400px] overflow-hidden">
+      <div id="code_lines" className="code-lines flex flex-col font-mono text-[10px] xs:text-xs md:text-sm shadow-sm border border-lines bg-surface rounded-md w-full h-[280px] xs:h-[320px] sm:h-[360px] md:h-[400px] overflow-hidden">
         {/* Encabezado de Ventana Técnica CAD */}
-        <div className="bg-surface border-b border-lines px-3 py-2 flex items-center justify-between font-mono text-[10px] text-secondary shrink-0 select-none">
+        <div className="bg-surface border-b border-lines px-2.5 sm:px-3 py-1.5 sm:py-2 flex items-center justify-between font-mono text-[9px] sm:text-[10px] text-secondary shrink-0 select-none">
           <div className="flex items-center gap-1.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-lines/60"></span>
-            <span className="w-2.5 h-2.5 rounded-full bg-lines/60"></span>
-            <span className="w-2.5 h-2.5 rounded-full bg-lines/60"></span>
+            <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-lines/60"></span>
+            <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-lines/60"></span>
+            <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-lines/60"></span>
           </div>
-          <span className="tracking-wider uppercase font-semibold text-secondary">
+          <span className="tracking-wider uppercase font-semibold text-secondary text-[9px] sm:text-[10px]">
             SYSTEM_SIMULATOR // CODE_STREAM.ts
           </span>
           <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
         </div>
         
         {/* Contenedor de Código con Dimensiones Estables y Pre-reservadas */}
-        <div className="p-4 overflow-hidden pointer-events-none select-none grow leading-relaxed space-y-1 bg-surface flex flex-col justify-start">
+        <div className="p-2 sm:p-4 overflow-hidden pointer-events-none select-none grow leading-tight sm:leading-relaxed space-y-0.5 sm:space-y-1 bg-surface flex flex-col justify-start">
           {codeSnippets.map((line, idx) => {
             const isVisible = idx < visibleLines;
             return (

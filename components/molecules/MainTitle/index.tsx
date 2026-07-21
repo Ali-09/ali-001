@@ -59,27 +59,27 @@ const MainTitle = () => {
         <span className="inline-block w-2 h-2 rounded-full bg-accent animate-pulse"></span>
         <span>{t?.mainTitle.fig01 || "FIG 01 // MAIN_VIEW — POS:"} X-245 Y-980</span>
       </div>
-      <div className="flex items-baseline min-h-[50px] md:min-h-[75px] my-1">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-primary whitespace-pre leading-none font-sans">
+      <div className="flex items-baseline min-h-[36px] sm:min-h-[50px] md:min-h-[75px] my-1">
+        <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-primary whitespace-pre leading-none font-sans">
           {sentece}
         </h1>
-        <span className="text-5xl md:text-7xl font-bold animate-fade text-accent leading-none select-none ml-1">
+        <span className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-bold animate-fade text-accent leading-none select-none ml-1">
           |
         </span>
       </div>
-      <p className="text-2xl md:text-3xl text-accent font-mono mt-1">{t?.mainTitle.role || "Senior Front End Developer"}</p>
+      <p className="text-base sm:text-2xl md:text-3xl text-accent font-mono mt-1">{t?.mainTitle.role || "Senior Front End Developer"}</p>
       
       {/* Botones de Acción Técnico CAD */}
-      <div className="flex flex-wrap gap-3 mt-6">
+      <div className="flex flex-wrap gap-2 sm:gap-3 mt-4 sm:mt-6">
         <button 
           onClick={() => handleNavigate('about')}
-          className="btn text-sm px-4 py-1.5 h-auto rounded-md cursor-pointer font-mono tracking-wider"
+          className="btn text-xs sm:text-sm px-3 sm:px-4 py-1.5 h-auto rounded-md cursor-pointer font-mono tracking-wider"
         >
           {t?.mainTitle.exploreBtn || "EXPLORE SYSTEM →"}
         </button>
         <button 
           onClick={() => handleNavigate('contact')}
-          className="btn text-sm px-4 py-1.5 h-auto rounded-md cursor-pointer font-mono tracking-wider border-lines text-secondary hover:border-accent hover:text-accent"
+          className="btn text-xs sm:text-sm px-3 sm:px-4 py-1.5 h-auto rounded-md cursor-pointer font-mono tracking-wider border-lines text-secondary hover:border-accent hover:text-accent"
         >
           {t?.mainTitle.contactBtn || "GET IN TOUCH"}
         </button>

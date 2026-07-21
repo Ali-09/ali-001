@@ -4,15 +4,15 @@ const CADBlueprintOverlay: React.FC = () => {
   return (
     <div className="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden" aria-hidden="true">
       {/* Marco CAD de Lienzo Principal (Enmarcado entre Header, Footer y SideNav) */}
-      <div className="absolute top-20 bottom-12 left-4 md:left-64 right-4 md:right-6 border border-lines/25 rounded-sm">
+      <div className="absolute top-14 sm:top-20 bottom-10 sm:bottom-12 left-2 sm:left-4 md:left-64 right-2 sm:right-4 md:right-6 border border-lines/25 rounded-sm">
         {/* Línea Láser de Escaneo Sutil */}
         <div className="absolute left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-accent/40 to-transparent shadow-[0_0_8px_rgba(255,182,72,0.3)] animate-laser-scan"></div>
 
         {/* Esquina Superior Izquierda con bloque de título de ingeniería */}
         <div className="absolute -top-2.5 -left-1 font-mono text-[9px] text-secondary/50 flex items-center gap-1.5 bg-background px-1.5">
           <span className="text-accent font-bold">┌</span>
-          <span>SYS.ORIGIN [0,0]</span>
-          <span className="text-lines font-bold">|</span>
+          <span className="hidden xs:inline">SYS.ORIGIN [0,0]</span>
+          <span className="text-lines font-bold hidden sm:inline">|</span>
           <span className="hidden sm:inline">DRAWN BY: J. ALI</span>
         </div>
 
@@ -20,14 +20,14 @@ const CADBlueprintOverlay: React.FC = () => {
         <div className="absolute -top-2.5 -right-1 font-mono text-[9px] text-secondary/50 flex items-center gap-1.5 bg-background px-1.5">
           <span className="hidden sm:inline font-mono">PROJ: BLUEPRINT-V2</span>
           <span className="text-lines font-bold hidden sm:inline">|</span>
-          <span>DATUM.REF [1400,0]</span>
+          <span className="hidden xs:inline">DATUM.REF [1400,0]</span>
           <span className="text-accent font-bold">┐</span>
         </div>
 
         {/* Esquina Inferior Izquierda */}
         <div className="absolute -bottom-2.5 -left-1 font-mono text-[9px] text-secondary/50 flex items-center gap-1.5 bg-background px-1.5">
           <span className="text-accent font-bold">└</span>
-          <span>FRAME.LIMIT [0,900]</span>
+          <span className="hidden xs:inline">FRAME.LIMIT [0,900]</span>
           <span className="text-lines font-bold hidden sm:inline">|</span>
           <span className="hidden sm:inline">SCALE: NTS</span>
         </div>
@@ -36,7 +36,7 @@ const CADBlueprintOverlay: React.FC = () => {
         <div className="absolute -bottom-2.5 -right-1 font-mono text-[9px] text-secondary/50 flex items-center gap-1.5 bg-background px-1.5">
           <span className="hidden sm:inline">SHEET: DA-001/008</span>
           <span className="text-lines font-bold hidden sm:inline">|</span>
-          <span>CAD.LAYER // v2.4</span>
+          <span className="hidden xs:inline">CAD.LAYER // v2.4</span>
           <span className="text-accent font-bold">┘</span>
         </div>
 
