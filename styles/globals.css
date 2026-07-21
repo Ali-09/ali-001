@@ -97,15 +97,15 @@ input:focus, textarea:focus{
 }
 
 .content{
-  @apply flex h-full flex-col md:flex-row grow overflow-hidden;
+  @apply flex h-full flex-col md:flex-row grow overflow-hidden items-stretch;
 }
 
 .container{
-  @apply h-full w-full px-4 md:px-8 py-4 overflow-hidden;
+  @apply h-full w-full px-4 md:px-8 py-4 overflow-hidden flex flex-col justify-center items-center;
 }
 
 .aside{
-  @apply w-full md:w-52 lg:w-60 h-auto md:h-full flex flex-col justify-between shrink-0;
+  @apply w-full md:w-60 lg:w-64 h-auto md:h-full flex flex-col justify-between shrink-0;
 }
 
 .title{
